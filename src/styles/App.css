@@ -1,4 +1,103 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
+/*h1 {*/
+/*    color: #27aedb;*/
+/*    text-align: center;*/
+/*}*/
+
+.org-root * {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row wrap;
+
+    /*justify-content: space-around;*/
+}
+
+.col-12 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.col-3 {
+    width: 24%;
+    padding: 0 15px;
+}
+
+.list-page {
+    font-family: Montserrat, sans-serif;
+}
+
+h1.list-page-header {
+    font-size: 48px;
+    margin-top: 40px;
+}
+
+.list-region {
+    margin-bottom: 35px;
+}
+
+.list-region h3.list-region-header {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.list-region .list-single-region {
+    margin: 10px 0;
+}
+
+.list-region .list-single-region-name {
+    font-size: 16px;
+    position: relative;
+    user-select: none;
+}
+
+.list-region .list-single-region-name.list-single-region-name-enabled {
+    color: #222222;
+    cursor: pointer;
+}
+
+.list-region .list-single-region-name.list-single-region-name-disabled {
+    color: #bbbbbb;
+}
+
+.list-region .list-single-region-name.list-single-region-name-enabled:after {
+    content: '+';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-weight: 700;
+    color: #003dff;
+}
+
+.list-region .list-single-region-name.list-single-region-name-enabled.list-single-region-name-closed:after {
+    content: '+';
+}
+
+.list-region .list-single-region-name.list-single-region-name-enabled.list-single-region-name-opened:after {
+    content: '-';
+}
+
+
+.list-region .list-single-region-organizations {
+    padding: 5px 15px;
+    display: none;
+}
+
+.list-region .list-single-region-organizations.list-single-region-organizations-opened {
+    display: block;
+}
+
+.list-region .list-single-region-organizations .list-single-organization {
+    padding: 3px 0;
+    user-select: none;
+}
+
+.list-region .list-single-region-organizations .list-single-organization a {
+    color: #003dff;
+    text-decoration: none;
 }
