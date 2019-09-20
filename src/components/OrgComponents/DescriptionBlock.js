@@ -7,19 +7,19 @@ class DescriptionBlock extends Component {
         return (
 
             <section className='org-first-block'>
-                <div className='org-abstract-description'>
-                    <h1 className='org-page-header'>МБУ "СЦ" Космос</h1>
-                    <div className='org-description'>
+                <div className='description-abstract-description'>
+                    <h1 className='description-page-header'>МБУ "СЦ" Космос</h1>
+                    <div className='description-description'>
                         Муниципальное бюджетное учреждение «Спортивный центр «КОСМОС» создано в 2007 году и осуществляет
                         физкультурно-оздоровительную и спортивно-досуговую работу для жителей Гагаринского района, на
                         основании Закона города Москвы от 25 октября 2006 года № 53.
                     </div>
-                    <div className='org-location'>
+                    <div className='description-location'>
                         г.Москва, ЮЗАО, Ленинский проспект, д.64/2
                     </div>
                     <button className='enroll'>Записаться</button>
                 </div>
-                <div>
+                <div className='description-logo'>
                     <img src = '/src/static/images/kosmos-logo.png' alt='лого'/>
                 </div>
             </section>

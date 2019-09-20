@@ -13,25 +13,25 @@
 
 }
 
-.org-logo {
+.description-logo {
     max-width: 1440px;
     -webkit-box-pack: center;
     justify-content: center;
 
 }
 
-h1.org-page-header {
+h1.description-page-header {
     font-size: 50px;
     /*margin-top: 40px;*/
 }
 
-.org-abstract-description {
+.description-abstract-description {
     max-width: 560px;
     display: flex;
     flex-direction: column;
 }
 
-.org-description {
+.description-description {
     margin-top: 16px;
     font-size: 16px;
     font-weight: normal;
@@ -42,7 +42,7 @@ h1.org-page-header {
     color: rgb(30, 29, 32);
 }
 
-.org-location {
+.description-location {
     margin-top: 24px;
     font-size: 16px;
     font-weight: bold;
@@ -77,4 +77,27 @@ button.enroll {
 
 .section {
 
+}
+
+.sections-footer {
+    display: flex;
+    margin-top: 105px;
+    align-self: center;
+    justify-self: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+h2.sections-title {
+
+    font-size: 50px;
+    text-align: center;
+
+}
+
+a.sections-doc {
+    display: flex;
+    font-weight: 600;
+    color: rgb(0, 62, 255);
+    text-decoration: none;
 }
