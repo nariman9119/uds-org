@@ -1,0 +1,38 @@
+.persons-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.person-container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+}
+
+.person-avatar-container {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.person-avatar-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.person-job-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.person-job-description {
+    font-size: 14px;
+    text-align: center;
+}
