@@ -18,7 +18,6 @@ class OrgComponent extends Component {
                 <ClubsBlock/>
                 <RewardsBlock/>
                 <StaffBlock/>
-
             </div>
         );
     }

@@ -19,8 +19,9 @@ class DescriptionBlock extends Component {
                     </div>
                     <button className='enroll'>Записаться</button>
                 </div>
+
                 <div className='description-logo'>
-                    <img src = '/src/static/images/kosmos-logo.png' alt='лого'/>
+                    <img className='description-block-logo' src = '/src/static/images/kosmos-logo.png' alt='лого'/>
                 </div>
             </section>
 

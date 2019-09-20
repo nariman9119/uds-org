@@ -5,10 +5,11 @@ import React, {Component} from 'react';
 class SectionsBlock extends Component {
     render() {
         return (
-            <div>
+            <section>
                 <div className='sections-block'>
                     <h2 className='sections-block-title'>Секции</h2>
-                    <a className='sections-block-schedule' target='_blank' href='/src/static/schedule/kosmos-schedule.pdf'>
+                    <a className='sections-block-schedule' target='_blank'
+                       href='/src/static/schedule/kosmos-schedule.pdf'>
                         <span className='sections-block-schedule'>
                             Расписание
                         </span>
@@ -19,7 +20,45 @@ class SectionsBlock extends Component {
                         </svg>
                     </a>
                 </div>
-            </div>
+
+                <div className='sections-age'>
+                    <div className='sections-age-1'>
+                        <svg viewBox="0 0 20 12" className="sections-svg">
+                            <path fill="#1E1D20" fill-rule="nonzero"
+                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
+                                  opacity=".5"></path>
+                        </svg>
+                        <h3 className='sections-age-title'>2-6 лет(3)</h3>
+                    </div>
+                    <div className='sections-age-1'>
+                        <svg viewBox="0 0 20 12" className="sections-svg" open="">
+                            <path fill="#1E1D20" fill-rule="nonzero"
+                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
+                                  opacity=".5"></path>
+                        </svg>
+                        <h3 className='sections-age-title'>22-66 лет(3)</h3>
+                    </div>
+                    <div className='sections-age-1'>
+                        <svg viewBox="0 0 20 12" className="sections-svg">
+                            <path fill="#1E1D20" fill-rule="nonzero"
+                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
+                                  opacity=".5"></path>
+                        </svg>
+                        <h3 className='sections-age-title'>2-6 лет(3)</h3>
+                    </div>
+                    <div className='sections-age-1'>
+                        <svg viewBox="0 0 20 12" className="sections-svg">
+                            <path fill="#1E1D20" fill-rule="nonzero"
+                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
+                                  opacity=".5"></path>
+                        </svg>
+                        <h3 className='sections-age-title'>2-6 лет(3)</h3>
+                    </div>
+
+
+                </div>
+
+            </section>
         );
     }
 }

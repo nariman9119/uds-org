@@ -1,15 +1,10 @@
-.container {
-    align-self: center;
-    justify-self: center;
-    display: grid;
-    padding: 0px 20px;
+
+.section {
+    display: block;
 }
 
-.description {
-    font-family: Montserrat, sans-serif;
+.description-block {
 
-}
-.description-block{
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -18,10 +13,16 @@
 }
 
 .description-block-logo {
+    display: flex;
     max-width: 1440px;
     -webkit-box-pack: center;
     justify-content: center;
 
+}
+
+img.description-block-logo {
+    max-height: 460px;
+    max-width: 512px;
 }
 
 h1.description-block-title {
@@ -101,16 +102,54 @@ h2.sections-block-title {
 
 }
 
-a.sections-block-schedule {
+.sections-block-schedule {
     display: flex;
+
+}
+
+a.sections-block-schedule {
     font-weight: 600;
     color: rgb(0, 62, 255);
     text-decoration: none;
     padding-top: 18px;
     font-size: 22px;
 }
-span.sections-block-schedule{
-    display: flex;
+
+span.sections-block-schedule {
     padding-top: 5px;
     margin-right: 13px;
 }
+
+.sections-age {
+    margin-top: -5px;
+}
+
+.sections-age-1 {
+    display: flex;
+    margin-top: 40px;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 58px;
+    padding-left: 16px;
+    border-bottom: 1px solid
+}
+
+.sections-svg {
+    width: 20px;
+    height: 12px;
+    margin-right: 14px;
+    transform: rotate(270deg);
+}
+
+.sections-age-title {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    color: rgb(30, 29, 32);
+    display: inline;
+
+}
+
