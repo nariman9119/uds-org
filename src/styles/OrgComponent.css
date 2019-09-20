@@ -1,0 +1,80 @@
+.container {
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    padding: 0px 20px;
+}
+
+.org-first-block {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 40px;
+
+}
+
+.org-logo {
+    max-width: 1440px;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+}
+
+h1.org-page-header {
+    font-size: 50px;
+    /*margin-top: 40px;*/
+}
+
+.org-abstract-description {
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+}
+
+.org-description {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: rgb(30, 29, 32);
+}
+
+.org-location {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    color: rgb(30, 29, 32);
+}
+
+button.enroll {
+
+    background-color: rgb(0, 62, 255);
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 28px;
+    padding: 13px 34px;
+    outline: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    margin: 40px auto 0px 0px;
+}
+
+.section {
+
+}
