@@ -97,7 +97,8 @@ h1.list-page-header {
     user-select: none;
 }
 
-.list-region .list-single-region-organizations .list-single-organization a {
+.list-region .list-single-region-organizations .list-single-organization span {
     color: #003dff;
     text-decoration: none;
+    cursor: pointer;
 }

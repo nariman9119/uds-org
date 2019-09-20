@@ -1,16 +1,17 @@
 import '../styles/App.css';
 import React, {Component} from 'react';
-import ListPageComponent from "./ListPageComponent";
-
-import OrgComponent from "./OrgComponent";
+import {Provider} from "react-redux";
+import {store} from "../data/store";
+import MainComponent from "./MainComponent";
 
 class orgApp extends Component {
     render() {
         return (
-            <OrgComponent />
+            <Provider store={store}>
+                <MainComponent/>
+            </Provider>
         );
     }
 }
-
 
 export default orgApp;

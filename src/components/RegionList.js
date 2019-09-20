@@ -10,7 +10,6 @@ class RegionList extends Component {
                 <h3 className="list-region-header">{this.props.regionList.name}</h3>
                 <div className="list-region-inner-wrapper">
                     {this.props.regionList.regions.map((region, i) => {
-                        console.log(region);
                         return (<Region key={i} name={region.name} organizations={region.organizations}/>)
                     })}
                 </div>
