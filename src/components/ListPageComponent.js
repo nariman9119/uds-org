@@ -1,6 +1,7 @@
 import '../styles/App.css';
 import React, {Component} from 'react';
 import RegionList from "./RegionList";
+import {connect} from "react-redux";
 
 class ListPageComponent extends Component {
     constructor(props) {
@@ -23,15 +24,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: 'temp'
+                                id: '1'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '2'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '3'
                             },
                         ]
                     },
@@ -48,15 +49,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: '#'
+                                id: '4'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '5'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '6'
                             },
                         ]
                     },
@@ -86,15 +87,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: '#'
+                                id: '7'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '8'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '9'
                             },
                         ]
                     },
@@ -107,15 +108,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: '#'
+                                id: '10'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '11'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '12'
                             },
                         ]
                     },
@@ -133,15 +134,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: '#'
+                                id: '13'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '14'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '15'
                             },
                         ]
                     },
@@ -158,15 +159,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: '#'
+                                id: '16'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '17'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '18'
                             },
                         ]
                     },
@@ -184,15 +185,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: '#'
+                                id: '19'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '20'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '21'
                             },
                         ]
                     },
@@ -209,15 +210,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: '#'
+                                id: '22'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '23'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '24'
                             },
                         ]
                     },
@@ -235,15 +236,15 @@ class ListPageComponent extends Component {
                         organizations: [
                             {
                                 name: 'Ut vel velit',
-                                link: '#'
+                                id: '25'
                             },
                             {
                                 name: 'Aliquam sit',
-                                link: '#'
+                                id: '26'
                             },
                             {
                                 name: 'Cras nec orci',
-                                link: '#'
+                                id: '27'
                             },
                         ]
                     },
@@ -261,6 +262,10 @@ class ListPageComponent extends Component {
     }
 
     render() {
+        if (typeof this.props.organization !== "undefined") {
+            return false;
+        }
+
         return (
             <div className="container list-page">
                 <div className="col-12">
@@ -274,8 +279,14 @@ class ListPageComponent extends Component {
     }
 }
 
+const mapStateToProps = (state) => ({
+    organization: state.app.organization,
+});
 
+const mapDispatchToProps = (dispatch) => ({
 
+});
 
+const ConnectedListPageComponent = connect(mapStateToProps, mapDispatchToProps)(ListPageComponent);
 
-export default ListPageComponent;
+export default ConnectedListPageComponent;
