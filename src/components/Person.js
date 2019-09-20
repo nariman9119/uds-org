@@ -4,20 +4,36 @@ import React, {Component} from 'react';
 
 class Person extends Component {
     render() {
-        const {image, jobTitle, jobDescription} = this.props
+        const {image, name, lineView, jobTitle, jobDescription} = this.props
 
         return (
-        <div className='person-container'>
+            lineView ? <div className='person-container-column'>
             <div className='person-avatar-container'>
                 <img src={image} alt='avatar'/>
             </div>
-            <span className='person-job-title'>
+            <span className='person-job-title center-text'>
                 {jobTitle}
             </span>
-            <span className='person-job-description'>
+            <span className='person-job-description center-text'>
                 {jobDescription}
             </span>
-        </div>
+        </div> :
+            <div className='person-container-row'>
+                <div className='person-avatar-container'>
+                    <img src={image} alt='avatar'/>
+                </div>
+                <div className='person-column-description-container'>
+                    <span className='person-name'>
+                        {name}
+                    </span>
+                    <span className='person-job-title'>
+                        {jobTitle}
+                    </span>
+                    <span className='person-job-description'>
+                        {jobDescription}
+                    </span>
+                </div>
+            </div>
         )
     }
 }
