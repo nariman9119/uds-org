@@ -1,10 +1,16 @@
-.persons-wrapper {
+.persons-wrapper-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.person-container {
+.persons-wrapper-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.person-container-column {
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -13,10 +19,20 @@
     width: 300px;
 }
 
+.person-container-row{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 900px;
+}
+
 .person-avatar-container {
     height: 100px;
     width: 100px;
     margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 .person-avatar-container img {
@@ -25,14 +41,45 @@
     border-radius: 50%;
 }
 
+.center-text {
+    text-align: center;
+}
+
+.person-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 .person-job-title {
     font-size: 18px;
     font-weight: bold;
-    text-align: center;
     margin-bottom: 10px;
 }
 
 .person-job-description {
     font-size: 14px;
-    text-align: center;
+}
+
+.person-column-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.change-view-button {
+    cursor: pointer;
+    user-select: none;
+    width: fit-content;
+    color: white;
+    background-color: blue;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 300ms ease-out;
+}
+
+.change-view-button:hover {
+    background-color: darkblue;
 }
