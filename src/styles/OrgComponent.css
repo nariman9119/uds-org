@@ -5,7 +5,11 @@
     padding: 0px 20px;
 }
 
-.org-first-block {
+.description {
+    font-family: Montserrat, sans-serif;
+
+}
+.description-block{
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -13,25 +17,26 @@
 
 }
 
-.description-logo {
+.description-block-logo {
     max-width: 1440px;
     -webkit-box-pack: center;
     justify-content: center;
 
 }
 
-h1.description-page-header {
+h1.description-block-title {
     font-size: 50px;
-    /*margin-top: 40px;*/
+    margin-top: 40px;
 }
 
-.description-abstract-description {
+.description-block-abstract-description {
     max-width: 560px;
     display: flex;
     flex-direction: column;
 }
 
-.description-description {
+.description-block-description {
+
     margin-top: 16px;
     font-size: 16px;
     font-weight: normal;
@@ -42,7 +47,7 @@ h1.description-page-header {
     color: rgb(30, 29, 32);
 }
 
-.description-location {
+.description-block-location {
     margin-top: 24px;
     font-size: 16px;
     font-weight: bold;
@@ -75,29 +80,37 @@ button.enroll {
     margin: 40px auto 0px 0px;
 }
 
-.section {
 
-}
-
-.sections-footer {
+.sections-block {
     display: flex;
     margin-top: 105px;
     align-self: center;
     justify-self: center;
     -webkit-box-pack: center;
     justify-content: center;
+
+
 }
 
-h2.sections-title {
+h2.sections-block-title {
 
     font-size: 50px;
     text-align: center;
+    width: 100%;
+    font-weight: 600;
 
 }
 
-a.sections-doc {
+a.sections-block-schedule {
     display: flex;
     font-weight: 600;
     color: rgb(0, 62, 255);
     text-decoration: none;
+    padding-top: 18px;
+    font-size: 22px;
+}
+span.sections-block-schedule{
+    display: flex;
+    padding-top: 5px;
+    margin-right: 13px;
 }
