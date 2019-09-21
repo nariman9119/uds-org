@@ -153,3 +153,7 @@ span.sections-block-schedule {
 
 }
 
+.section-color:hover {
+    cursor: pointer;
+    background-color: #E6E6FE;
+}

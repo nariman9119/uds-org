@@ -12,10 +12,10 @@ class Person extends Component {
                 <img src={image} alt='avatar'/>
             </div>
             <span className='person-job-title center-text'>
-                {jobTitle}
+                {name}
             </span>
             <span className='person-job-description center-text'>
-                {jobDescription}
+                {jobTitle}
             </span>
         </div> :
             <div className='person-container-row'>

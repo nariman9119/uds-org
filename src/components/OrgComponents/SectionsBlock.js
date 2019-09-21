@@ -3,6 +3,24 @@ import ScheduleIcon from '../../static/svg/schedule.svg';
 import React, {Component} from 'react';
 
 class SectionsBlock extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpened: false,
+            colour: 0
+        };
+
+
+        this.handleToggle = this.handleToggle.bind(this)
+    }
+
+    handleToggle() {
+        this.setState(state => ({
+            isOpened: !state.isOpened
+        }));
+    }
+
     render() {
         return (
             <section>
@@ -21,7 +39,7 @@ class SectionsBlock extends Component {
                     </a>
                 </div>
 
-                <div className='sections-age'>
+                <div className='sections-age section-color' onClick={this.handleToggle}>
                     <div className='sections-age-1'>
                         <svg viewBox="0 0 20 12" className="sections-svg">
                             <path fill="#1E1D20" fill-rule="nonzero"
@@ -30,6 +48,9 @@ class SectionsBlock extends Component {
                         </svg>
                         <h3 className='sections-age-title'>2-6 лет(3)</h3>
                     </div>
+                </div>
+                <div className='sections-age section-color' onClick={this.handleToggle}>
+
                     <div className='sections-age-1'>
                         <svg viewBox="0 0 20 12" className="sections-svg" open="">
                             <path fill="#1E1D20" fill-rule="nonzero"
@@ -38,6 +59,8 @@ class SectionsBlock extends Component {
                         </svg>
                         <h3 className='sections-age-title'>22-66 лет(3)</h3>
                     </div>
+                </div>
+                <div className='sections-age section-color' onClick={this.handleToggle}>
                     <div className='sections-age-1'>
                         <svg viewBox="0 0 20 12" className="sections-svg">
                             <path fill="#1E1D20" fill-rule="nonzero"
@@ -46,17 +69,21 @@ class SectionsBlock extends Component {
                         </svg>
                         <h3 className='sections-age-title'>2-6 лет(3)</h3>
                     </div>
-                    <div className='sections-age-1'>
-                        <svg viewBox="0 0 20 12" className="sections-svg">
-                            <path fill="#1E1D20" fill-rule="nonzero"
-                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
-                                  opacity=".5"></path>
-                        </svg>
-                        <h3 className='sections-age-title'>2-6 лет(3)</h3>
-                    </div>
+                </div>
 
+                <div className='sections-age section-color' onClick={this.handleToggle}>
+
+                    <div className='sections-age-1'>
+                        <svg viewBox="0 0 20 12" className="sections-svg">
+                            <path fill="#1E1D20" fill-rule="nonzero"
+                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
+                                  opacity=".5"></path>
+                        </svg>
+                        <h3 className='sections-age-title'>2-6 лет(3)</h3>
+                    </div>
 
                 </div>
+
 
             </section>
         );
