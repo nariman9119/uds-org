@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
     "stub": "nodemon ./stub/index.js",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "database": "docker run --name uds-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5"
   },
   "author": "inno_js",
   "license": "ISC",
@@ -30,6 +31,7 @@
   "dependencies": {
     "express": "latest",
     "mysql": "^2.17.1",
+    "promise-mysql": "^4.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
