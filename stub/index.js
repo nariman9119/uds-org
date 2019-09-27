@@ -17,9 +17,9 @@ app.get('/api/organizations', async function(req, res) {
     const districts = await db.query('SELECT * FROM districts');
 
     for (const district of districts) {
-        district.areas = await db.query('SELECT * FROM areas WHERE district_id = ?', district.id);
+        district.regions = await db.query('SELECT * FROM areas WHERE district_id = ?', district.id);
         for (const area of district.areas) {
-            area.organizations = await db.query('SELECT id, url, short_name FROM organizations WHERE area_id = ?', area.id);
+            area.organizations = await db.query('SELECT id, url, short_name as name FROM organizations WHERE area_id = ?', area.id);
         }
     }
 
