@@ -7,7 +7,7 @@ const host = 'localhost';
 const port = 3306;
 
 module.exports = {
-    async db_connect() {
+    async connect() {
         const connection = await mysql.createConnection({
             host,
             user,
@@ -17,7 +17,10 @@ module.exports = {
         const result = await connection.query(`SHOW DATABASES LIKE '${database}'`);
         if (result.length === 0) {
             this.create_database(connection);
+        } else {
+            await connection.query(`USE \`${database}\``);
         }
+        return connection;
     },
     async create_database(connection) {
         await connection.query(`CREATE DATABASE \`${database}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci`);
