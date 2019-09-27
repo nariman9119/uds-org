@@ -31,6 +31,7 @@
   "dependencies": {
     "express": "latest",
     "mysql": "^2.17.1",
+    "mysql-import": "^2.0.2",
     "promise-mysql": "^4.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
