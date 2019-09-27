@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 class RewardsBlock extends Component {
     render() {
         return (
-            <h1>REWARDS</h1>
+            <h2 className='block-title'>REWARDS</h2>
         );
     }
 }

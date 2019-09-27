@@ -1,5 +1,4 @@
 import '../../styles/OrgComponent.css';
-import ScheduleIcon from '../../static/svg/schedule.svg';
 import React, {Component} from 'react';
 
 class SectionsBlock extends Component {
@@ -24,8 +23,8 @@ class SectionsBlock extends Component {
     render() {
         return (
             <section>
-                <div className='sections-block'>
-                    <h2 className='sections-block-title'>Секции</h2>
+                <div className='start-block'>
+                    <h2 className='block-title'>Секции</h2>
                     <a className='sections-block-schedule' target='_blank'
                        href='/src/static/schedule/kosmos-schedule.pdf'>
                         <span className='sections-block-schedule'>
@@ -46,7 +45,7 @@ class SectionsBlock extends Component {
                                   d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
                                   opacity=".5"></path>
                         </svg>
-                        <h3 className='sections-age-title'>2-6 лет(3)</h3>
+                        <h3 className='sections-age-title'>2-6 лет</h3>
                     </div>
                 </div>
                 <div className='sections-age section-color' onClick={this.handleToggle}>
@@ -57,7 +56,7 @@ class SectionsBlock extends Component {
                                   d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
                                   opacity=".5"></path>
                         </svg>
-                        <h3 className='sections-age-title'>22-66 лет(3)</h3>
+                        <h3 className='sections-age-title'>7-11 лет</h3>
                     </div>
                 </div>
                 <div className='sections-age section-color' onClick={this.handleToggle}>
@@ -67,7 +66,7 @@ class SectionsBlock extends Component {
                                   d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
                                   opacity=".5"></path>
                         </svg>
-                        <h3 className='sections-age-title'>2-6 лет(3)</h3>
+                        <h3 className='sections-age-title'>12-17 лет</h3>
                     </div>
                 </div>
 
@@ -79,7 +78,7 @@ class SectionsBlock extends Component {
                                   d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
                                   opacity=".5"></path>
                         </svg>
-                        <h3 className='sections-age-title'>2-6 лет(3)</h3>
+                        <h3 className='sections-age-title'>18 лет и старше</h3>
                     </div>
 
                 </div>

@@ -1,23 +1,35 @@
 import '../styles/App.css';
+import '../styles/Person.css';
 import React, {Component} from 'react';
 
 
-class Person extends Component {
+export class PersonHorizontal extends Component {
     render() {
-        const {image, name, lineView, jobTitle, jobDescription} = this.props
+        const {image, name, jobTitle} = this.props
 
         return (
-            lineView ? <div className='person-container-column'>
-            <div className='person-avatar-container'>
-                <img src={image} alt='avatar'/>
-            </div>
-            <span className='person-job-title center-text'>
+            <div className='person-container-column'>
+                <div className='person-avatar-container'>
+                    <img src={image} alt='avatar'/>
+                </div>
+                <span className='person-job-title center-text'>
                 {name}
             </span>
-            <span className='person-job-description center-text'>
+                <span className='person-job-description center-text'>
                 {jobTitle}
             </span>
-        </div> :
+            </div>
+
+        )
+    }
+}
+
+
+export class PersonVertical extends Component {
+    render() {
+        const {image, name, jobTitle, jobDescription} = this.props
+        return(
+
             <div className='person-container-row'>
                 <div className='person-avatar-container'>
                     <img src={image} alt='avatar'/>
@@ -38,4 +50,4 @@ class Person extends Component {
     }
 }
 
-export default Person
+export default {PersonVertical, PersonHorizontal};

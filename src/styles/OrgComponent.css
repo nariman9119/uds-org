@@ -82,7 +82,7 @@ button.enroll {
 }
 
 
-.sections-block {
+.start-block {
     display: flex;
     margin-top: 105px;
     align-self: center;
@@ -93,7 +93,7 @@ button.enroll {
 
 }
 
-h2.sections-block-title {
+h2.block-title {
 
     font-size: 50px;
     text-align: center;
@@ -156,4 +156,53 @@ span.sections-block-schedule {
 .section-color:hover {
     cursor: pointer;
     background-color: #E6E6FE;
+}
+
+
+
+.admin-block {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.about-block{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.about-block-title{
+    margin-top: 105px;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600
+}
+
+.about-block-content{
+    margin-bottom: 64px;
+    min-width: 45%;
+    height: calc(220px + (178 * ((100vw - 768px) / 672)));
+    opacity: 1;
+    box-shadow: rgba(24, 40, 151, 0.4) 0px 16px 64px 0px;
+    background-color: rgb(0, 62, 255);
+    background-image: url(https://img.youtube.com/vi/OMjCMjhR24U/0.jpg);
+    background-size: cover;
+    max-width: 558px;
+    max-height: 398px;
+    display: grid;
+    font-size: calc(80px + (40 * ((100vw - 768px) / 672)));
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.about-block-desc{
+    padding: 0px 150px;
 }
