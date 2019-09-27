@@ -8,7 +8,7 @@ class orgApp extends Component {
     render() {
         return (
             <Provider store={store}>
-                <MainComponent/>
+                <MainComponent path={window.location.pathname.split('/').slice(1)}/>
             </Provider>
         );
     }

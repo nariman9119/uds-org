@@ -3,25 +3,41 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import ListPageComponent from "./ListPageComponent";
 import OrgComponent from "./OrgComponent";
-import {selectOrganization} from "../data/action-creators";
+import {loadPage} from "../data/action-creators";
 
 class MainComponent extends Component {
+    componentDidMount() {
+        this.props.loadPage(this.props.path);
+
+        window.onpopstate = ev => this.props.loadPage(window.location.pathname.split("/").slice(1));
+    }
+
     render() {
-        return (
+        document.title = this.props.title;
+
+        return this.props.page[0] === "" ? (
             <div className="app_global_wrapper">
                 <ListPageComponent/>
+            </div>
+        ) : this.props.page[0] === "organization" ? (
+            <div className="app_global_wrapper">
                 <OrgComponent/>
+            </div>
+        ) : (
+            <div className="app_global_wrapper">
+                <p>404</p>
             </div>
         );
     }
 }
 
 const mapStateToProps = (state) => ({
-    selectedOrganization: state.app.organization,
+    page: state.app.page,
+    title: state.app.title
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    selectOrganization: (organization) => dispatch(selectOrganization(organization))
+    loadPage: (page) => dispatch(loadPage(page))
 });
 
 const ConnectedMainComponent = connect(mapStateToProps, mapDispatchToProps)(MainComponent);

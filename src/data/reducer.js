@@ -1,22 +1,22 @@
 import {TYPES} from "./action-types";
 
 const initialState = {
-    organization: void 0,
+    page: '',
+    title: 'Organizations'
 };
 
 export const reducer = (prevState = initialState, action) => {
     const newState = {...prevState};
     switch (action.type) {
-        case TYPES.SELECT_ORGANIZATION:
+        case TYPES.LOAD_PAGE:
             return {
                 ...newState,
-                organization: action.data.organization
+                page: action.data.page
             };
-
-        case TYPES.UNSELECT_ORGANIZATION:
+        case TYPES.CHANGE_TITLE:
             return {
                 ...newState,
-                organization: void 0
+                title: action.data.title
             };
     }
 
