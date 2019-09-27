@@ -3,21 +3,20 @@ import '../styles/OrgComponent.css';
 import React, {Component} from 'react';
 import DescriptionBlock from "./OrgComponents/DescriptionBlock";
 import SectionsBlock from "./OrgComponents/SectionsBlock";
-import {AdministrationBlock, AboutOrganization} from "./OrgComponents/AdministrationBlock";
+import {AboutOrganization, AdministrationBlock} from "./OrgComponents/AdministrationBlock";
 import ClubsBlock from "./OrgComponents/ClubsBlock";
 import RewardsBlock from "./OrgComponents/RewardsBlock";
 import StaffBlock from "./OrgComponents/StaffBlock";
 import {connect} from "react-redux";
-import {unselectOrganization} from "../data/action-creators";
+import {changeTitle} from "../data/action-creators";
 
 class OrgComponent extends Component {
+    componentDidMount() {
+        this.props.changeTitle('Single Organization');
+    }
+
     render() {
-        if (typeof this.props.organization === "undefined") {
-            return false;
-        }
-
         return (
-
             <div>
                 <DescriptionBlock/>
                 <SectionsBlock/>
@@ -32,11 +31,11 @@ class OrgComponent extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    organization: state.app.organization,
+    page: state.app.page,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    unselectOrganization: () => dispatch(unselectOrganization())
+    changeTitle: (title) => dispatch(changeTitle(title))
 });
 
 const ConnectedOrgComponent = connect(mapStateToProps, mapDispatchToProps)(OrgComponent);
