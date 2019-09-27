@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Person from '../Person'
+import {PersonVertical} from '../Person'
 import avatar1 from '../../static/images/1.png'
 import avatar2 from '../../static/images/2.png'
 import avatar3 from '../../static/images/3.jpg'
@@ -37,8 +37,17 @@ class StaffBlock extends Component {
 
     render() {
         return (
-            <div>
-                <h2 className='block-title'>Staff</h2>
+            <div className='staff-block'>
+                <h2 className='block-title'>Педагогический состав</h2>
+                <div className='persons-wrapper-row staff-block-staff'>
+                    {persons.map(person =>
+                        <PersonVertical key={person.id} {...person}/>
+                    )}
+                </div>
+                <div className='staff-block-footer'>
+                    <div className='staff-block-footer-title'>Достигайте своих целей</div>
+                    <button className='staff-block-footer'>Записаться</button>
+                </div>
             </div>
         );
     }

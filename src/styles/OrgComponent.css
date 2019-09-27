@@ -159,7 +159,6 @@ span.sections-block-schedule {
 }
 
 
-
 .admin-block {
     display: flex;
     flex-wrap: wrap;
@@ -167,7 +166,7 @@ span.sections-block-schedule {
     justify-content: center;
 }
 
-.about-block{
+.about-block {
     display: flex;
     flex-direction: column;
     -webkit-box-pack: center;
@@ -176,7 +175,7 @@ span.sections-block-schedule {
     align-items: center;
 }
 
-.about-block-title{
+.about-block-title {
     margin-top: 105px;
     margin-bottom: 40px;
     text-align: center;
@@ -185,7 +184,7 @@ span.sections-block-schedule {
     font-weight: 600
 }
 
-.about-block-content{
+.about-block-content {
     margin-bottom: 64px;
     min-width: 45%;
     height: calc(220px + (178 * ((100vw - 768px) / 672)));
@@ -203,6 +202,51 @@ span.sections-block-schedule {
     background-position: 50% 50%;
 }
 
-.about-block-desc{
+.about-block-desc {
     padding: 0px 150px;
+}
+
+.staff-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-block-staff {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.staff-block-footer {
+    margin-top: 85px;
+    background-color: rgb(0, 62, 255);
+    color: white;
+    padding-top: 48px;
+    padding-bottom: 40px;
+    text-align: center;
+    margin-bottom: 105px;
+    border-radius: 16px;
+}
+
+.staff-block-footer-title{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+button.staff-block-footer{
+    margin-top: 25px;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(30, 29, 32);
+    cursor: pointer;
+    border-radius: 28px;
+    padding: 13px 34px;
+    outline: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
 }
