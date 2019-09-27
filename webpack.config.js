@@ -6,7 +6,8 @@ module.exports = {
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "orgsApp.js",
-        libraryTarget: "umd"
+        libraryTarget: "umd",
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -28,6 +29,9 @@ module.exports = {
                 ]
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({

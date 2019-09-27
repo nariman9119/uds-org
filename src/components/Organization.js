@@ -1,32 +1,43 @@
 import '../styles/App.css';
 import React, {Component} from 'react';
-import {selectOrganization} from "../data/action-creators";
+import {changeTitle, loadPage} from "../data/action-creators";
 import {connect} from "react-redux";
 
 class Organization extends Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        this.getUrl = this.getUrl.bind(this);
     }
 
-    handleClick(id) {
-        this.props.selectOrganization(id);
+    componentDidMount() {
+        this.props.changeTitle('Organizations');
+    }
+
+    getUrl() {
+        return '/organization/' + this.props.link;
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        history.pushState({}, this.props.name, this.getUrl());
+        this.props.loadPage(this.getUrl().split('/').slice(1));
     }
 
     render() {
         return (
             <div className="list-single-organization">
-                <a onClick={this.handleClick} id={this.props.id}>{this.props.name}</a>
+                <a href={this.getUrl()} onClick={e => this.handleClick(e)}>{this.props.name}</a>
             </div>
         );
     }
 }
 
-const mapStateToProps = (state) => ({
-});
+const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = (dispatch) => ({
-    selectOrganization: (organization) => dispatch(selectOrganization(organization)),
+    loadPage: (page) => dispatch(loadPage(page)),
+    changeTitle: (title) => dispatch(changeTitle(title))
 });
 
 const ConnectedOrganization = connect(mapStateToProps, mapDispatchToProps)(Organization);

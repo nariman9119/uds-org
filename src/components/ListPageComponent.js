@@ -2,6 +2,7 @@ import '../styles/App.css';
 import React, {Component} from 'react';
 import RegionList from "./RegionList";
 import {connect} from "react-redux";
+import {loadPage} from "../data/action-creators";
 
 class ListPageComponent extends Component {
     constructor(props) {
@@ -262,10 +263,6 @@ class ListPageComponent extends Component {
     }
 
     render() {
-        if (typeof this.props.organization !== "undefined") {
-            return false;
-        }
-
         return (
             <div className="container list-page">
                 <div className="col-12">
@@ -280,11 +277,11 @@ class ListPageComponent extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    organization: state.app.organization,
+    page: state.app.page,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-
+    loadPage: (page) => dispatch(loadPage(page))
 });
 
 const ConnectedListPageComponent = connect(mapStateToProps, mapDispatchToProps)(ListPageComponent);

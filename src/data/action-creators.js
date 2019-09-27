@@ -1,14 +1,15 @@
 import {TYPES} from "./action-types";
 
-export const selectOrganization = (organization) => (dispatch) => {
+export const loadPage = (page) => (dispatch) => {
     dispatch({
-        type: TYPES.SELECT_ORGANIZATION,
-        data: {organization: organization}
+        type: TYPES.LOAD_PAGE,
+        data: {page: page}
     });
 };
 
-export const unselectOrganization = () => (dispatch) => {
+export const changeTitle = (title) => (dispatch) => {
     dispatch({
-        type: TYPES.UNSELECT_ORGANIZATION
+        type: TYPES.CHANGE_TITLE,
+        data: {title: title}
     });
 };
