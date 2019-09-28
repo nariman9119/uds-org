@@ -29,6 +29,8 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "cors": "^2.8.5",
     "express": "latest",
     "mysql": "^2.17.1",
     "mysql-import": "^2.0.2",

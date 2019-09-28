@@ -26,7 +26,7 @@ class SectionsBlock extends Component {
                 <div className='start-block'>
                     <h2 className='block-title'>Секции</h2>
                     <a className='sections-block-schedule' target='_blank'
-                       href='/src/static/schedule/kosmos-schedule.pdf'>
+                       href={this.props.schedule_url}>
                         <span className='sections-block-schedule'>
                             Расписание
                         </span>

@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const fs = require('fs');
 const path = require('path');
+const  cors = require('cors');
 const db_connect = require('./db_connect');
+
 
 let db;
 
@@ -11,6 +13,7 @@ db_connect.connect().then((connection) => {
     console.log("Connected to database");
 });
 
+app.use(cors()); // to avoid cors problem (google it if you dont know)
 
 app.get('/api/organizations', async function(req, res) {
 
@@ -18,7 +21,7 @@ app.get('/api/organizations', async function(req, res) {
 
     for (const district of districts) {
         district.regions = await db.query('SELECT * FROM areas WHERE district_id = ?', district.id);
-        for (const area of district.areas) {
+        for (const area of district.regions) {
             area.organizations = await db.query('SELECT id, url, short_name as name FROM organizations WHERE area_id = ?', area.id);
         }
     }
@@ -51,6 +54,7 @@ app.get('/api/organization/:url', async function(req, res) {
 });
 
 app.use(express.static("dist"));
+app.use(express.static("stub/shared")); // open content dir to web
 
 app.listen(8090, () => console.log("Listening on port 8090!"));
 
