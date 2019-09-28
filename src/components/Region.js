@@ -32,7 +32,7 @@ class Region extends Component {
                     + (this.state.isOpened ? 'list-single-region-organizations-opened' : '')
                 }>
                     {this.props.organizations.map((organization, i) => {
-                        return (<Organization key={i} name={organization.name} link={organization.link}/>)
+                        return (<Organization key={i} name={organization.name} link={organization.url}/>)
                     })}
                 </div>
             </div>

@@ -5,18 +5,18 @@ import React, {Component} from 'react';
 
 export class PersonHorizontal extends Component {
     render() {
-        const {image, name, jobTitle} = this.props
+        const {photo, name, position} = this.props;
 
         return (
             <div className='person-container-column'>
                 <div className='person-avatar-container'>
-                    <img src={image} alt='avatar'/>
+                    <img src={`http://localhost:8090/content/${photo}`} alt='avatar'/>
                 </div>
                 <span className='person-job-title center-text'>
                 {name}
             </span>
                 <span className='person-job-description center-text'>
-                {jobTitle}
+                {position}
             </span>
             </div>
 

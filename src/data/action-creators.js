@@ -1,15 +1,37 @@
-import {TYPES} from "./action-types";
+import actions from "./action-types";
 
-export const loadPage = (page) => (dispatch) => {
-    dispatch({
-        type: TYPES.LOAD_PAGE,
-        data: {page: page}
-    });
+
+export const loadPage = (page) => ({
+    type: actions.LOAD_PAGE,
+    data: {page: page}
+});
+
+export const changeTitle = (title) => ({
+    type: actions.CHANGE_TITLE,
+    data: {title: title}
+});
+
+export const loadOrganizations = () => async (dispatch) => {
+    dispatch({ type: actions.LOAD_ORGANIZATIONS_PENDING });
+    try {
+        const response = await fetch('http://localhost:8090/api/organizations');
+        const data = await response.json();
+        dispatch({ type: actions.LOAD_ORGANIZATIONS, payload: data });
+    } catch(error) {
+        dispatch({ type: actions.LOAD_ORGANIZATIONS_FAILED, payload: error });
+    }
 };
 
-export const changeTitle = (title) => (dispatch) => {
-    dispatch({
-        type: TYPES.CHANGE_TITLE,
-        data: {title: title}
-    });
+export const loadCurrentOrganization = (url) => async (dispatch) => {
+    dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION_PENDING });
+    try {
+        const response = await fetch(`http://localhost:8090/api/organization/${url}`);
+        const data = await response.json();
+        dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION, payload: data });
+        dispatch(changeTitle(data.name));
+
+    } catch(error) {
+        dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION_FAILED, payload: error });
+    }
 };
+

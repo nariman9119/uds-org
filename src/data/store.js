@@ -3,11 +3,13 @@ import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension';
 
 import {reducer as formReducer} from 'redux-form'
-import {reducer as appReducer} from "./reducer";
+import routeReducer from "./routeReducer";
+import organizationsReducer from "./organizationsReducer";
 
 const reducer = combineReducers({
-    app: appReducer,
-    form: formReducer
+    app: routeReducer,
+    form: formReducer,
+    organizations: organizationsReducer
 });
 
 export const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));

@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: ['@babel/polyfill', "./src/index.js"], // set polyfill first to avoid errors related to async/await
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "orgsApp.js",

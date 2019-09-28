@@ -1,19 +1,19 @@
-import {TYPES} from "./action-types";
+import actions from "./action-types";
 
 const initialState = {
     page: '',
     title: 'Organizations'
 };
 
-export const reducer = (prevState = initialState, action) => {
+export default (prevState = initialState, action) => {
     const newState = {...prevState};
     switch (action.type) {
-        case TYPES.LOAD_PAGE:
+        case actions.LOAD_PAGE:
             return {
                 ...newState,
                 page: action.data.page
             };
-        case TYPES.CHANGE_TITLE:
+        case actions.CHANGE_TITLE:
             return {
                 ...newState,
                 title: action.data.title

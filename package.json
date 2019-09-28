@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "stub": "nodemon ./stub/index.js",
+    "build": "webpack --mode production",
+    "database": "docker run --name uds-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5"
   },
   "author": "inno_js",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.10",
     "redux-devtools-extension": "^2.13.8",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
@@ -26,6 +29,12 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "cors": "^2.8.5",
+    "express": "latest",
+    "mysql": "^2.17.1",
+    "mysql-import": "^2.0.2",
+    "promise-mysql": "^4.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
