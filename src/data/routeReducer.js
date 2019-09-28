@@ -5,7 +5,7 @@ const initialState = {
     title: 'Organizations'
 };
 
-export const reducer = (prevState = initialState, action) => {
+export default (prevState = initialState, action) => {
     const newState = {...prevState};
     switch (action.type) {
         case TYPES.LOAD_PAGE:
