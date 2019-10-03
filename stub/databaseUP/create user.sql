@@ -1,0 +1,3 @@
+CREATE USER 'UDSUSER'@'%' IDENTIFIED WITH mysql_native_password BY 'udsdeveloper';
+CREATE USER 'UDSUSER'@'%' IDENTIFIED BY 'udsdeveloper';
+GRANT ALL PRIVILEGES ON *.* TO 'UDSUSER'@'%' WITH GRANT OPTION;

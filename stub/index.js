@@ -56,6 +56,6 @@ app.get('/api/organization/:url', async function(req, res) {
 app.use(express.static("dist"));
 app.use(express.static("stub/shared")); // open content dir to web
 
-app.listen(8090, () => console.log("Listening on port 8090!"));
+app.listen(8091, () => console.log("Listening on port 8090!"));
 
 module.exports = app;
