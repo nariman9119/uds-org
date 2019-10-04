@@ -59,7 +59,7 @@ app.use(require('./orgs/orgs.controller'));
 
 app.use(express.static("dist"));
 app.use(express.static("stub/shared")); // open content dir to web
-
+app.use(require('./users/users.controller'));
 
 app.listen(8090, () => console.log("Listening on port 8090!"));
 

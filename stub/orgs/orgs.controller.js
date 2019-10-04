@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const mainService = require('./orgs.service');
 //const moment = require('moment')
-
+const authorize = require("../_helpers/authorize");
+const Role = require("../_helpers/role");
 
 router.get('/api/organizations', async function getOrgs(req, res, next) {
 
@@ -17,7 +18,7 @@ router.get('/api/organizations', async function getOrgs(req, res, next) {
     }
 );
 
-router.get('/api/organizations:url', async function getOrgs(req, res, next) {
+router.get('/api/organizations/:url', async function getOrg(req, res, next) {
 
         try {
             const data = await mainService.getOrg()

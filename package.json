@@ -47,7 +47,8 @@
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-jwt": "5.3.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
@@ -63,7 +64,8 @@
     "redux-form": "^8.2.6",
     "redux-thunk": "^2.3.0",
     "webpack-dev-middleware": "latest",
-    "body-parser": "latest"
+    "body-parser": "latest",
+    "jsonwebtoken": "latest"
   },
   "repository": {
     "type": "git",
