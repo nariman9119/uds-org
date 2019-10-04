@@ -21,15 +21,13 @@ class DescriptionBlock extends Component {
 
             <section className='description-block'>
                 <div className='description-block-abstract-description'>
-                    <h1>
-                        <ContentEditable
-                            html={this.props.data.name}
-                            disabled={false}
-                            onChange={this.updateName}
-                            tagName='h1'
-                            className='description-block-title'
-                        />
-                    </h1>
+                    <ContentEditable
+                        html={this.props.data.name}
+                        disabled={false}
+                        onChange={this.updateName}
+                        tagName='h1'
+                        className='description-block-title'
+                    />
                     <ContentEditable
                         html={this.props.data.short_description}
                         disabled={false}

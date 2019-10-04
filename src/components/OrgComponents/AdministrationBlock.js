@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {PersonHorizontal, PersonVertical} from '../Person';
+import {PersonHorizontal} from '../Person';
+import ContentEditable from 'react-contenteditable'
 
 import '../../styles/Person.css'
 
@@ -20,10 +21,9 @@ export class AdministrationBlock extends Component {
     }
 }
 
-export class AboutOrganization extends Component{
+export class AboutOrganization extends Component {
     render() {
-
-        return(
+        return (
 
             <section className='about-block'>
                 <h2 className='about-block-title'>Об организации</h2>
@@ -45,8 +45,6 @@ export class AboutOrganization extends Component{
     }
 
 }
-
-
 
 
 export default {AdministrationBlock, AboutOrganization};
