@@ -9,7 +9,8 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "stub": "nodemon ./stub/index.js",
     "build": "webpack --mode production",
-    "database": "docker run --name uds-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5"
+    "database": "docker run -p 3306:3306 --name udsdb -e MYSQL_ROOT_PASSWORD=udsdeveloper -d mysql:8 mysqld --default-authentication-plugin=mysql_native_password",
+    "fill_database": "node ./stub/db_connect.js"
   },
   "author": "inno_js",
   "license": "ISC",
