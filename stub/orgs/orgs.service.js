@@ -30,8 +30,8 @@ async function getOrgs() {
 }
 
 
-async function getOrg(){
-    const data = (await db.query('SELECT * FROM organizations WHERE url = ?', req.params.url))[0];
+async function getOrg(url){
+    const data = (await db.query('SELECT * FROM organizations WHERE url = ?', url))[0];
 
     data.section_groups = await db.query('SELECT * from section_groups');
 

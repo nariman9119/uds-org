@@ -6,6 +6,4 @@ export{
     App
 }
 
-console.log("HELLO")
-
 ReactDOM.render(<App />, document.getElementById("root"));

@@ -18,10 +18,10 @@ router.get('/api/organizations', async function getOrgs(req, res, next) {
     }
 );
 
-router.get('/api/organizations/:url', async function getOrg(req, res, next) {
+router.get('/api/organization/:url', async function getOrg(req, res, next) {
 
         try {
-            const data = await mainService.getOrg()
+            const data = await mainService.getOrg(req.params.url);
             return data ? res.json(data) : res.status(404).json({message: 'Организация отсутствуют'})
         } catch (error) {
             next(error)

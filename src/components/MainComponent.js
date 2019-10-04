@@ -14,6 +14,7 @@ class MainComponent extends Component {
 
     render() {
         document.title = this.props.title;
+        console.log(this.props.page);
 
         return this.props.page[0] === "" ? (
             <div className="app_global_wrapper">
