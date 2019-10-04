@@ -12,11 +12,11 @@ async function getOrgs() {
     const connection = new DataBase();
     await connection.init();
 
-    const districts = (await connection.execute('SELECT * FROM districts'))[0];
+    const districts = (await connection.execute("SELECT * FROM uds.districts`"))[0];
     for (const district of districts) {
-        district.regions = (await connection.execute(`SELECT * FROM areas WHERE district_id = ${district.id}`))[0];
+        district.regions = (await connection.execute("SELECT * FROM uds.`areas` WHERE district_id = ${district.id}"))[0];
         for (const area of district.regions) {
-            area.organizations = (await connection.execute(`SELECT id, url, short_name as name FROM organizations WHERE area_id = ${area.id}`))[0];
+            area.organizations = (await connection.execute("SELECT id, url, short_name as name FROM uds.`organizations` WHERE area_id = ${area.id}"))[0];
         }
     }
     connection.end();
