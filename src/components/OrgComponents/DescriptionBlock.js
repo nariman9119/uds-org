@@ -1,39 +1,49 @@
 import '../../styles/OrgComponent.css';
 import React, {Component} from 'react';
 import ContentEditable from 'react-contenteditable'
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import {updateMainInfo} from "../../data/action-creators";
 
 class DescriptionBlock extends Component {
-
-    constructor() {
-        super();
-        this.handleTitleChange = this.handleTitleChange.bind(this);
-    }
-
-    handleTitleChange() {
-
-    }
+    updateName = (e) => {
+        this.props.updateMainInfo({ id: this.props.data.id, name: e.target.value })
+    };
+    updateShortDescription = (e) => {
+        this.props.updateMainInfo({ id: this.props.data.id, short_description: e.target.value })
+    };
+    updateAddress = (e) => {
+        this.props.updateMainInfo({ id: this.props.data.id, address: e.target.value })
+    };
 
     render() {
         return (
 
             <section className='description-block'>
                 <div className='description-block-abstract-description'>
-                    <h1 >
+                    <h1>
                         <ContentEditable
-                            innerRef={this.contentEditable}
-                            html={this.props.data.name} // innerHTML of the editable div
-                            disabled={false}       // use true to disable editing
-                            onChange={this.handleTitleChange} // handle innerHTML change
-                            tagName='h1' // Use a custom HTML tag (uses a div by default)
+                            html={this.props.data.name}
+                            disabled={false}
+                            onChange={this.updateName}
+                            tagName='h1'
                             className='description-block-title'
                         />
                     </h1>
-                    <div className='description-block-description' contenteditable="true">
-                        {this.props.data.description}
-                    </div>
-                    <div className='description-block-location'>
-                        {this.props.data.address}
-                    </div>
+                    <ContentEditable
+                        html={this.props.data.short_description}
+                        disabled={false}
+                        onChange={this.updateShortDescription}
+                        tagName='div'
+                        className='description-block-description'
+                    />
+                    <ContentEditable
+                        html={this.props.data.address}
+                        disabled={false}
+                        onChange={this.updateAddress}
+                        tagName='div'
+                        className='description-block-location'
+                    />
                     <button className='enroll'>Записаться</button>
                 </div>
 
@@ -46,5 +56,12 @@ class DescriptionBlock extends Component {
     }
 }
 
+const mapStateToProps = (state) => ({
+    data: state.organizations.current
+});
 
-export default DescriptionBlock;
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+    updateMainInfo
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(DescriptionBlock);

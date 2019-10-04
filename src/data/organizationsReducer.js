@@ -38,6 +38,11 @@ export default (prevState = initialState, action) => {
                 loading: false,
                 error: null
             };
+        case actions.UPDATE_MAIN_INFO:
+            return {
+                ...newState,
+                current: {...newState.current, ...action.payload}
+            }
     }
 
     return newState

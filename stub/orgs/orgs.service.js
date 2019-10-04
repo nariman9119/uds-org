@@ -4,8 +4,9 @@ const {DataBase} = require('../lib/db');
 
 module.exports = {
     getOrgs,
-    getOrg
-}
+    getOrg,
+    updateMainInfo
+};
 
 async function getOrgs() {
     const connection = new DataBase();
@@ -47,4 +48,15 @@ async function getOrg(url){
     data.stuff = (await connection.execute(`SELECT * FROM stuff WHERE organization_id = ${data.id}`))[0];
     connection.end();
     return data
+}
+
+async function updateMainInfo(data_new){
+    const connection = new DataBase();
+    await connection.init();
+
+    const data = (await connection.execute(`SELECT * FROM organizations WHERE id = ${data_new.id}`))[0][0];
+    Object.assign(data, data_new);
+
+    const [res] = await connection.execute(`UPDATE organizations SET short_name = '${data.short_name}', name = '${data.name}', short_description = '${data.short_description}', about = '${data.about}', address  ='${data.address}' WHERE id = ${data.id}`);
+    return data_new;
 }
