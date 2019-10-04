@@ -9,6 +9,7 @@ class DataBase {
     async init() {
         try {
             this.connection = await mysql.createConnection({
+                database: "uds-db",
                 host: "localhost",
                 user: "root",
                 password: "my-secret-pw",
