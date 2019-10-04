@@ -14,20 +14,22 @@ db_connect.connect().then((connection) => {
 });
 
 app.use(cors()); // to avoid cors problem (google it if you dont know)
-
-app.get('/api/organizations', async function(req, res) {
-
-    const districts = await db.query('SELECT * FROM districts');
-
-    for (const district of districts) {
-        district.regions = await db.query('SELECT * FROM areas WHERE district_id = ?', district.id);
-        for (const area of district.regions) {
-            area.organizations = await db.query('SELECT id, url, short_name as name FROM organizations WHERE area_id = ?', area.id);
-        }
-    }
-
-    res.json(districts);
-});
+//
+// app.get('/api/organizations', async function(req, res) {
+//
+//     const districts = await db.query('SELECT * FROM districts');
+//
+//     for (const district of districts) {
+//         district.regions = await db.query('SELECT * FROM areas WHERE district_id = ?', district.id);
+//
+//         for (const area of district.regions) {
+//             area.organizations = await db.query('SELECT id, url, short_name as name FROM organizations WHERE area_id = ?', area.id);
+//         }
+//     }
+//
+//     res.json(districts);
+//     console.log(districts)
+// });
 
 app.get('/api/organization/:url', async function(req, res) {
 
@@ -56,6 +58,8 @@ app.get('/api/organization/:url', async function(req, res) {
 app.use(express.static("dist"));
 app.use(express.static("stub/shared")); // open content dir to web
 
-app.listen(8091, () => console.log("Listening on port 8090!"));
+app.use(require('./orgs/orgs.controller'));
+
+app.listen(8090, () => console.log("Listening on port 8090!"));
 
 module.exports = app;

@@ -1,5 +1,4 @@
 const mysql = require('promise-mysql');
-
 const database = 'uds-db';
 const user = 'root';
 const password = 'my-secret-pw';
@@ -32,7 +31,7 @@ module.exports = {
             password,
             database,
             onerror: err=>console.log(err.message)
-        }).import('stub/uds-db.sql').then(()=> {
+        }).import('stub/databaseUP/orgs/ddl/script.sql').then(()=> {
             console.log('all statements have been executed')
         });
     }
