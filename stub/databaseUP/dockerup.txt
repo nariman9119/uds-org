@@ -1,1 +1,1 @@
-docker run --name udsdb -e MYSQL_ROOT_PASSWORD=udsdeveloper -d mysql:8
+docker run -p 3306:3306 --name udsdb -e MYSQL_ROOT_PASSWORD=udsdeveloper -d mysql:8
