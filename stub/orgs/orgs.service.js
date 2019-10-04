@@ -27,7 +27,10 @@ async function getOrg(url){
     const connection = new DataBase();
     await connection.init();
 
-    const data = (await connection.execute(`SELECT * FROM organizations WHERE url = "${url}"`))[0];
+    const data = (await connection.execute(`SELECT * FROM organizations WHERE url = "${url}"`))[0][0];
+
+    data.section_groups = (await connection.execute('SELECT * from section_groups'))[0];
+
     for (const group of data.section_groups) {
         group.sections = (await connection.execute(`SELECT * FROM sections where group_id = ${group.id} and organization_id = ${data.id}`))[0];
     }

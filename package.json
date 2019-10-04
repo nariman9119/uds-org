@@ -52,20 +52,21 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
+    "body-parser": "latest",
     "core-js": "^3.2.1",
     "cors": "^2.8.5",
+    "jsonwebtoken": "latest",
     "mysql": "^2.17.1",
     "mysql-import": "^2.0.2",
     "promise-mysql": "^4.1.0",
     "react": "^16.9.0",
+    "react-contenteditable": "^3.3.2",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "redux-form": "^8.2.6",
     "redux-thunk": "^2.3.0",
-    "webpack-dev-middleware": "latest",
-    "body-parser": "latest",
-    "jsonwebtoken": "latest"
+    "webpack-dev-middleware": "latest"
   },
   "repository": {
     "type": "git",
