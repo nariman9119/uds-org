@@ -51,8 +51,9 @@
     "express-jwt": "5.3.1"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/polyfill": "^7.6.0",
-    "body-parser": "latest",
+    "body-parser": "^1.19.0",
     "core-js": "^3.2.1",
     "cors": "^2.8.5",
     "jsonwebtoken": "latest",
