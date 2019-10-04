@@ -13,7 +13,6 @@ class DataBase {
                 user: "root",
                 password: "my-secret-pw",
                 port: "3306 ",
-                database: "uds-db"
 
             });
         } catch (error) {
