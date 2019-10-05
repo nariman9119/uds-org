@@ -29,13 +29,6 @@ export class AboutOrganization extends Component{
                 <h2 className='about-block-title'>Об организации</h2>
                 <div className='about-block-content'></div>
                 <div className='about-block-desc'>
-                    <ContentEditable
-                        html={this.props.data.name}
-                        disabled={this.props.editDisabled}
-                        onChange={this.props.onChange}
-                        tagName='h1'
-                        className='description-block-title'
-                    />
                     <p>
                         {this.props.about}
                     </p>
