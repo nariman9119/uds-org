@@ -15,13 +15,13 @@ class Organization extends Component {
     }
 
     getUrl() {
-        return '/organization/' + this.props.link;
+        return '#organization/' + this.props.link;
     }
 
     handleClick(e) {
         e.preventDefault();
         history.pushState({}, this.props.name, this.getUrl());
-        this.props.loadPage(this.getUrl().split('/').slice(1));
+        this.props.loadPage(this.getUrl().substr(1).split('/'));
     }
 
     render() {

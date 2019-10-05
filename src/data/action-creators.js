@@ -35,3 +35,19 @@ export const loadCurrentOrganization = (url) => async (dispatch) => {
     }
 };
 
+export const updateMainInfo = (data) => async (dispatch) => {
+    try {
+        dispatch({ type: actions.UPDATE_MAIN_INFO, payload: data });
+        const response = await fetch(`http://localhost:8090/api/organization/updateMainInfo`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        await response.json();
+    } catch(error) {
+        console.log(error);
+    }
+};

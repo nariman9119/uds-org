@@ -30,7 +30,7 @@ class OrgComponent extends Component {
 
         return (
             <div>
-                <DescriptionBlock data={data} />
+                <DescriptionBlock/>
                 <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups} />
                 <AdministrationBlock persons={data.administration} />
                 <AboutOrganization about={data.about} />
