@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(cors()); // to avoid cors problem (google it if you dont know)
+//app.use(require('./api'));
+
 app.use(require('./orgs/orgs.controller'));
 
 app.use(express.static("dist"));

@@ -14,7 +14,7 @@ export const changeTitle = (title) => ({
 export const loadOrganizations = () => async (dispatch) => {
     dispatch({ type: actions.LOAD_ORGANIZATIONS_PENDING });
     try {
-        const response = await fetch('http://localhost:8090/api/organizations');
+        const response = await fetch('/api/organizations');
         const data = await response.json();
         dispatch({ type: actions.LOAD_ORGANIZATIONS, payload: data });
     } catch(error) {
@@ -25,7 +25,7 @@ export const loadOrganizations = () => async (dispatch) => {
 export const loadCurrentOrganization = (url) => async (dispatch) => {
     dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION_PENDING });
     try {
-        const response = await fetch(`http://localhost:8090/api/organization/${url}`);
+        const response = await fetch(`/api/organization/${url}`);
         const data = await response.json();
         dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION, payload: data });
         dispatch(changeTitle(data.name));
@@ -38,7 +38,7 @@ export const loadCurrentOrganization = (url) => async (dispatch) => {
 export const updateMainInfo = (data) => async (dispatch) => {
     try {
         dispatch({ type: actions.UPDATE_MAIN_INFO, payload: data });
-        const response = await fetch(`http://localhost:8090/api/organization/updateMainInfo`, {
+        const response = await fetch(`/api/organization/updateMainInfo`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

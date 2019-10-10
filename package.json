@@ -1,6 +1,6 @@
 {
   "name": "uds-orgs",
-  "version": "1.0.10",
+  "version": "1.0.17",
   "private": false,
   "description": "UDS-ORG",
   "main": "dist/orgsApp.js",
@@ -52,6 +52,7 @@
     "express-jwt": "5.3.1"
   },
   "dependencies": {
+    "axios": "0.19.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/polyfill": "^7.6.0",
     "body-parser": "^1.19.0",
