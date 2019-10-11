@@ -1,5 +1,8 @@
+.idea
 src
 .babelrc
 .gitignore
 package.json
 package-lock.json
+webpack.config.js
+webpack.config.prod.js
