@@ -15,6 +15,12 @@ router.get("/api/organizations", (req, res) => {
     );
 });
 
+router.get("/api/organization/:url", (req, res) => {
+    res.send(
+        loadJson('./getOrgData')
+    );
+});
+
 
 module.exports = router
 

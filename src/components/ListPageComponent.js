@@ -8,9 +8,6 @@ import axios from 'axios';
 
 class ListPageComponent extends Component {
 
-    state =  {
-        areas: []
-    }
 
     getUsers() {
         axios('/api/organizations', {
@@ -19,13 +16,13 @@ class ListPageComponent extends Component {
                 'Content-Type': 'application/json'
             }
         }).then((res) => {
-            const areas = res.data.orgsData;
+            const areas = res.data.orgsData.areas;
             this.setState({areas})
         })
     }
 
     componentDidMount() {
-       this.getUsers();
+       //this.getUsers();
        this.props.loadOrganizations();
     }
 
@@ -34,9 +31,8 @@ class ListPageComponent extends Component {
 
 
         console.log("hello")
-
         console.log(this.props.organizations)
-        console.log(this.state.areas)
+
         console.log("bye")
         return (
             <div className="container list-page">

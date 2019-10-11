@@ -5,73 +5,114 @@
   "orgsData": {
     "areas": [
       {
-        "orgs": [],
-        "district_id": 1
+        "regions": [],
+        "id": 1,
+        "name": "ЦАО"
       },
       {
-        "orgs": [
+        "regions": [
           {
-            "alt": "Академический",
-            "title": "Академический"
+            "id": 1,
+            "district_id": 2,
+            "name": "Академический",
+            "organizations": [
+              {
+                "id": 1,
+                "url": "orion",
+                "name": "ГБУ \"Орион\""
+              }
+            ]
+
           },
           {
-            "alt": "Бутово Северное",
-            "title": "Бутово Северное"
+            "id": 2,
+            "district_id": 2,
+            "name": "Бутово Северное",
+            "organizations": []
           },
           {
-            "alt": "Гагаринский",
-            "title": "Гагаринский"
+            "id": 3,
+            "district_id": 2,
+            "name": "Бутово Южное",
+            "organizations": []
           },
           {
-            "alt": "Зюзино",
-            "title": "Зюзино"
+            "id": 4,
+            "district_id": 2,
+            "name": "Гагаринский",
+            "organizations": []
           },
           {
-            "alt": "Коньково",
-            "title": "Коньково"
+            "id": 5,
+            "district_id": 2,
+            "name": "Зюзино",
+            "organizations": []
           },
           {
-            "alt": "Ломоносовский",
-            "title": "Ломоносовский"
+            "id": 6,
+            "district_id": 2,
+            "name": "Коньково",
+            "organizations": []
           },
           {
-            "alt": "Обручевский",
-            "title": "Обручевский"
+            "id": 7,
+            "district_id": 2,
+            "name": "Ломоносовский",
+            "organizations": []
           },
           {
-            "alt": "Тёплый стан",
-            "title": "Тёплый стан"
+            "id": 8,
+            "district_id": 2,
+            "name": "Обручевский",
+            "organizations": []
           },
           {
-            "alt": "Черёмушки",
-            "title": "Черёмушки"
+            "id": 9,
+            "district_id": 2,
+            "name": "Тёплый стан",
+            "organizations": []
           },
           {
-            "alt": "Ломоносовский",
-            "title": "Ломоносовский"
+            "id": 10,
+            "district_id": 2,
+            "name": "Черёмушки",
+            "organizations": []
           },
           {
-            "alt": "Ясенево",
-            "title": "Ясенево"
+            "id": 11,
+            "district_id": 2,
+            "name": "Ломоносовский",
+            "organizations": []
+          },
+          {
+            "id": 12,
+            "district_id": 2,
+            "name": "Ясенево",
+            "organizations": []
           }
         ],
-        "district_id": 2
+        "id": 2,
+        "name": "ЮЗАО"
       },
       {
-        "orgs": [],
-        "district_id": 3
+        "regions": [],
+        "id": 3,
+        "name": "СВАО"
       },
       {
-        "orgs": [],
-        "district_id": 4
+        "regions": [],
+        "id": 4,
+        "name": "ВАО"
       },
       {
-        "orgs": [],
-        "district_id": 5
+        "regions": [],
+        "id": 5,
+        "name": "ЮВАО"
       },
       {
-        "orgs": [],
-        "district_id": 6
+        "regions": [],
+        "id": 6,
+        "name": "САО"
       }
     ]
   }

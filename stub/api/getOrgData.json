@@ -1,0 +1,125 @@
+{
+  "status": {
+    "code": 0
+  },
+  "dataOrion": {
+    "id": 1,
+    "url": "orion",
+    "short_name": "ГБУ \"Орион\"",
+    "name": "ГБУ ЦСД \"Орион\"",
+    "area_id": "1",
+    "about": "",
+    "address": "",
+    "logo": "",
+    "schedule_url": "",
+    "short_description": "",
+    "video": null,
+    "administration": [
+      {
+        "id": 1,
+        "name": "",
+        "position": "",
+        "photo": "",
+        "organization_id": ""
+      },
+      {
+        "id": 2,
+        "name": "",
+        "position": "",
+        "photo": "",
+        "organization_id": ""
+      }
+    ],
+    "awards": [],
+    "clubs": [
+      {
+        "id": 1,
+        "address": "",
+        "organization_id": 1,
+        "photos": [
+          {
+            "id": 1,
+            "photo": "",
+            "club_id": 1
+          },
+          {
+            "id": 2,
+            "photo": "",
+            "club_id": 1
+          },
+          {
+            "id": 3,
+            "photo": "",
+            "club_id": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "address": "",
+        "organization_id": 1,
+        "photos": [
+          {
+            "id": 4,
+            "photo": "",
+            "club_id": 2
+          },
+          {
+            "id": 5,
+            "photo": "",
+            "club_id": 2
+          }
+        ]
+      }
+    ],
+    "section_groups": [
+      {
+        "id": 1,
+        "name": "2-6 лет",
+        "sections": [
+          {
+            "id": 1,
+            "name": "",
+            "group_id": 1,
+            "organization_id": 1
+          },
+          {
+            "id": 2,
+            "name": "",
+            "group_id": 1,
+            "organization_id": 1
+          },
+          {
+            "id": 3,
+            "name": "",
+            "group_id": 1,
+            "organization_id": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "7-11 лет",
+        "sections": [
+          {
+            "id": 4,
+            "name": "",
+            "group_id": 2,
+            "organization_id": 1
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "12-17 лет",
+        "sections": []
+      },
+      {
+        "id": 4,
+        "name": "18 лет и старше",
+        "sections": []
+      }
+    ],
+    "stuff": []
+  }
+}
