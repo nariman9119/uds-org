@@ -13,8 +13,7 @@ app.use(require('./api'));
 
 app.use(express.static("dist"));
 app.use(express.static("stub/shared")); // open content dir to web
-app.use(require('./users/users.controller'));
 
-app.listen(8059, () => console.log("Listening on port 8090!"));
+app.listen(8090, () => console.log("Listening on port 8090!"));
 
 module.exports = app;
