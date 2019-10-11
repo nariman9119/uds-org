@@ -18,7 +18,7 @@ export const loadOrganizations = () => async (dispatch) => {
         const data = await response.json();
         //console.log('haha')
         //console.log(data.orgsData.areas)
-        dispatch({ type: actions.LOAD_ORGANIZATIONS, payload: data.orgsData.areas });
+        dispatch({ type: actions.LOAD_ORGANIZATIONS, payload: data.orgsData.areas});
     } catch(error) {
         dispatch({ type: actions.LOAD_ORGANIZATIONS_FAILED, payload: error });
     }
@@ -28,11 +28,15 @@ export const loadCurrentOrganization = (url) => async (dispatch) => {
     dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION_PENDING });
     try {
         const response = await fetch(`/api/organization/${url}`);
+        console.log(response)
         const data = await response.json();
+
         console.log('API')
-        console.log(data.dataOrion)
-        dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION, payload: data.dataOrion });
-        dispatch(changeTitle(data.name));
+        console.log(url)
+        console.log(data)
+
+        dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION, payload: data.orion});
+        dispatch(changeTitle(data.orion.name));
 
     } catch(error) {
         dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION_FAILED, payload: error });
