@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
     "stub": "nodemon ./stub/index.js",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --config=webpack.config.prod.js",
+    "dev": "webpack --mode development --config=webpack.config.js",
     "database": "docker run -p 3306:3306 --name udsdb -e MYSQL_ROOT_PASSWORD=udsdeveloper -d mysql:8 mysqld --default-authentication-plugin=mysql_native_password",
     "fill_database": "node ./stub/db_connect.js"
   },
@@ -52,12 +53,13 @@
     "express-jwt": "5.3.1"
   },
   "dependencies": {
-    "axios": "0.19.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/polyfill": "^7.6.0",
+    "axios": "0.19.0",
     "body-parser": "^1.19.0",
     "core-js": "^3.2.1",
     "cors": "^2.8.5",
+    "fbjs": "^1.0.0",
     "jsonwebtoken": "latest",
     "mysql": "^2.17.1",
     "mysql-import": "^2.0.2",

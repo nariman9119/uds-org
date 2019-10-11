@@ -4,23 +4,38 @@ import {connect} from "react-redux";
 import ListPageComponent from "./ListPageComponent";
 import OrgComponent from "./OrgComponent";
 import {loadPage} from "../data/action-creators";
+import {listen} from 'fbjs/lib/EventListener';
 
 class MainComponent extends Component {
+    constructor(props) {
+        super(props);
+
+        this.defaultRouteName = 'uds-orgs';
+        this.defaultRoute = '#' + this.defaultRouteName + '/orgsApp';
+    }
+
     componentDidMount() {
         this.props.loadPage(this.props.path);
 
-        window.onpopstate = ev => this.props.loadPage(window.location.pathname.split("/").slice(1));
+        if (this.props.page[0] !== this.defaultRouteName) {
+            window.location.hash = this.defaultRoute;
+        }
+
+        listen(window, 'hashchange', this.onHashChange);
     }
+
+    onHashChange = (event) => {
+        this.props.loadPage(window.location.hash.substr(1).split('/'));
+    };
 
     render() {
         document.title = this.props.title;
-        console.log(this.props.page);
 
-        return this.props.page[0] === "" ? (
+        return this.props.page[1] === "orgsApp" ? (
             <div className="app_global_wrapper">
                 <ListPageComponent/>
             </div>
-        ) : this.props.page[0] === "organization" ? (
+        ) : this.props.page[1] === "organization" ? (
             <div className="app_global_wrapper">
                 <OrgComponent/>
             </div>
