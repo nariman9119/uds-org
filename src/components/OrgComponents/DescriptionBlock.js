@@ -5,15 +5,16 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {updateMainInfo} from "../../data/action-creators";
 
+
 class DescriptionBlock extends Component {
     updateName = (e) => {
-        this.props.updateMainInfo({ id: this.props.data.id, name: e.target.value })
+        this.props.updateMainInfo({id: this.props.data.id, name: e.target.value})
     };
     updateShortDescription = (e) => {
-        this.props.updateMainInfo({ id: this.props.data.id, short_description: e.target.value })
+        this.props.updateMainInfo({id: this.props.data.id, short_description: e.target.value})
     };
     updateAddress = (e) => {
-        this.props.updateMainInfo({ id: this.props.data.id, address: e.target.value })
+        this.props.updateMainInfo({id: this.props.data.id, address: e.target.value})
     };
 
     render() {
@@ -21,15 +22,13 @@ class DescriptionBlock extends Component {
 
             <section className='description-block'>
                 <div className='description-block-abstract-description'>
-                    <h1>
-                        <ContentEditable
-                            html={this.props.data.name}
-                            disabled={false}
-                            onChange={this.updateName}
-                            tagName='h1'
-                            className='description-block-title'
-                        />
-                    </h1>
+                    <ContentEditable
+                        html={this.props.data.name}
+                        disabled={false}
+                        onChange={this.updateName}
+                        tagName='h1'
+                        className='description-block-title'
+                    />
                     <ContentEditable
                         html={this.props.data.short_description}
                         disabled={false}
@@ -48,7 +47,8 @@ class DescriptionBlock extends Component {
                 </div>
 
                 <div className='description-logo'>
-                    <img className='description-block-logo' src = {`http://localhost:8090/content/${this.props.data.logo}`} alt='лого'/>
+                    <img className='description-block-logo'
+                         src={`http://localhost:8090/content/${this.props.data.logo}`} alt='лого' />
                 </div>
             </section>
 

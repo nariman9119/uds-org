@@ -10,6 +10,7 @@ import StaffBlock from "./OrgComponents/StaffBlock";
 import {connect} from "react-redux";
 import {loadCurrentOrganization} from "../data/action-creators";
 import {bindActionCreators} from "redux";
+import Breadcrumbs from "./OrgComponents/Breadcrumbs";
 
 
 class OrgComponent extends Component {
@@ -29,12 +30,13 @@ class OrgComponent extends Component {
         }
 
         return (
-            <div>
+            <div className="org-body">
+                <Breadcrumbs orgName={data.name} />
                 <DescriptionBlock/>
                 <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups} />
                 <AdministrationBlock persons={data.administration} />
                 <AboutOrganization about={data.about} />
-                <ClubsBlock />
+                <ClubsBlock clubs={data.clubs} />
                 <RewardsBlock />
                 <StaffBlock />
             </div>

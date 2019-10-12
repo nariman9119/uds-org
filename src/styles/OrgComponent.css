@@ -1,10 +1,12 @@
+.org-body {
+    padding: 0 20px;
+}
 
 .section {
     display: block;
 }
 
 .description-block {
-
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -27,7 +29,13 @@ img.description-block-logo {
 
 h1.description-block-title {
     font-size: 50px;
-    margin-top: 40px;
+    margin: 0;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: rgb(30, 29, 32);
 }
 
 .description-block-abstract-description {
