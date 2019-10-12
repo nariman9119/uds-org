@@ -15,7 +15,7 @@ class Organization extends Component {
     }
 
     getUrl() {
-        return '#organization/' + this.props.link;
+        return '#uds-orgs/organization/' + this.props.link;
     }
 
     handleClick(e) {
