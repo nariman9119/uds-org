@@ -4,12 +4,36 @@ import RegionList from "./RegionList";
 import {connect} from "react-redux";
 import {loadOrganizations, loadPage} from "../data/action-creators";
 import {bindActionCreators} from "redux";
+import axios from 'axios';
 
 class ListPageComponent extends Component {
-    componentDidMount() {
-        this.props.loadOrganizations();
+
+
+    getUsers() {
+        axios('/api/organizations', {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then((res) => {
+            const areas = res.data.orgsData.areas;
+            this.setState({areas})
+        })
     }
+
+    componentDidMount() {
+       //this.getUsers();
+       this.props.loadOrganizations();
+    }
+
+
     render() {
+
+
+        console.log("hello")
+        console.log(this.props.organizations)
+
+        console.log("bye")
         return (
             <div className="container list-page">
                 <div className="col-12">

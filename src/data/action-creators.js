@@ -14,9 +14,11 @@ export const changeTitle = (title) => ({
 export const loadOrganizations = () => async (dispatch) => {
     dispatch({ type: actions.LOAD_ORGANIZATIONS_PENDING });
     try {
-        const response = await fetch('http://localhost:8090/api/organizations');
+        const response = await fetch('/api/organizations');
         const data = await response.json();
-        dispatch({ type: actions.LOAD_ORGANIZATIONS, payload: data });
+        //console.log('haha')
+        //console.log(data.orgsData.areas)
+        dispatch({ type: actions.LOAD_ORGANIZATIONS, payload: data.orgsData.areas});
     } catch(error) {
         dispatch({ type: actions.LOAD_ORGANIZATIONS_FAILED, payload: error });
     }
@@ -25,10 +27,16 @@ export const loadOrganizations = () => async (dispatch) => {
 export const loadCurrentOrganization = (url) => async (dispatch) => {
     dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION_PENDING });
     try {
-        const response = await fetch(`http://localhost:8090/api/organization/${url}`);
+        const response = await fetch(`/api/organization/${url}`);
+        console.log(response)
         const data = await response.json();
-        dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION, payload: data });
-        dispatch(changeTitle(data.name));
+
+        console.log('API')
+        console.log(url)
+        console.log(data)
+
+        dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION, payload: data.orion});
+        dispatch(changeTitle(data.orion.name));
 
     } catch(error) {
         dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION_FAILED, payload: error });
@@ -38,7 +46,7 @@ export const loadCurrentOrganization = (url) => async (dispatch) => {
 export const updateMainInfo = (data) => async (dispatch) => {
     try {
         dispatch({ type: actions.UPDATE_MAIN_INFO, payload: data });
-        const response = await fetch(`http://localhost:8090/api/organization/updateMainInfo`, {
+        const response = await fetch(`/api/organization/updateMainInfo`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

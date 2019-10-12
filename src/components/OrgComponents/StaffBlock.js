@@ -1,36 +1,12 @@
 import React, {Component} from 'react';
 import {PersonVertical} from '../Person'
-import avatar1 from '../../static/images/1.png'
-import avatar2 from '../../static/images/2.png'
-import avatar3 from '../../static/images/3.jpg'
+
 import '../../styles/Person.css'
 import '../../styles/OrgComponent.css'
+import {bindActionCreators} from "redux";
+import {updateMainInfo} from "../../data/action-creators";
+import {connect} from "react-redux";
 
-const persons = [
-    {
-        id: 0,
-        image: avatar1,
-        name: 'Харлан Наталья Владимировна',
-        jobTitle: 'Заместитель директора',
-        jobDescription: 'Занимается программированием программ'
-    },
-    {
-        id: 1,
-        image: avatar2,
-        name: 'Родионова Александра Сергеевна',
-        jobTitle: 'Методист',
-        jobDescription: 'Занимается менеджингом программ, программируемых программирующими программистами'
-    },
-    {
-        id: 2,
-        image: avatar3,
-        name: 'Арбузкин Денис Александрович',
-        jobTitle: 'Занятия: Айкидо для детей 9 – 17 лет, Самозащита 18+',
-        jobDescription: 'Инструктор Федерации Айкидо России . 1-й дан по Айкидо Акикай. 1-й дан по Шотокан Каратэ до. Мастер спорта по Самбо.'
-    },
-
-
-]
 
 class StaffBlock extends Component {
 
@@ -40,9 +16,11 @@ class StaffBlock extends Component {
             <div className='staff-block'>
                 <h2 className='block-title'>Педагогический состав</h2>
                 <div className='persons-wrapper-row staff-block-staff'>
-                    {persons.map(person =>
-                        <PersonVertical key={person.id} {...person}/>
-                    )}
+                    {
+                        this.props.data.staff.map(person =>
+                            <PersonVertical key={person.id} {...person}/>
+                        )}
+                    {console.log(this.props.data.staff)}
                 </div>
                 <div className='staff-block-footer'>
                     <div className='staff-block-footer-title'>Достигайте своих целей</div>
@@ -53,5 +31,12 @@ class StaffBlock extends Component {
     }
 }
 
+const mapStateToProps = (state) => ({
+    data: state.organizations.current
+});
 
-export default StaffBlock;
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+    updateMainInfo
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(StaffBlock);

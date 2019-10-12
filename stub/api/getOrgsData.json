@@ -1,0 +1,119 @@
+{
+  "status": {
+    "code": 0
+  },
+  "orgsData": {
+    "areas": [
+      {
+        "regions": [],
+        "id": 1,
+        "name": "ЦАО"
+      },
+      {
+        "regions": [
+          {
+            "id": 1,
+            "district_id": 2,
+            "name": "Академический",
+            "organizations": [
+              {
+                "id": 1,
+                "url": "orion",
+                "name": "ГБУ \"Орион\""
+              }
+            ]
+
+          },
+          {
+            "id": 2,
+            "district_id": 2,
+            "name": "Бутово Северное",
+            "organizations": []
+          },
+          {
+            "id": 3,
+            "district_id": 2,
+            "name": "Бутово Южное",
+            "organizations": []
+          },
+          {
+            "id": 4,
+            "district_id": 2,
+            "name": "Гагаринский",
+            "organizations": []
+          },
+          {
+            "id": 5,
+            "district_id": 2,
+            "name": "Зюзино",
+            "organizations": []
+          },
+          {
+            "id": 6,
+            "district_id": 2,
+            "name": "Коньково",
+            "organizations": []
+          },
+          {
+            "id": 7,
+            "district_id": 2,
+            "name": "Ломоносовский",
+            "organizations": []
+          },
+          {
+            "id": 8,
+            "district_id": 2,
+            "name": "Обручевский",
+            "organizations": []
+          },
+          {
+            "id": 9,
+            "district_id": 2,
+            "name": "Тёплый стан",
+            "organizations": []
+          },
+          {
+            "id": 10,
+            "district_id": 2,
+            "name": "Черёмушки",
+            "organizations": []
+          },
+          {
+            "id": 11,
+            "district_id": 2,
+            "name": "Ломоносовский",
+            "organizations": []
+          },
+          {
+            "id": 12,
+            "district_id": 2,
+            "name": "Ясенево",
+            "organizations": []
+          }
+        ],
+        "id": 2,
+        "name": "ЮЗАО"
+      },
+      {
+        "regions": [],
+        "id": 3,
+        "name": "СВАО"
+      },
+      {
+        "regions": [],
+        "id": 4,
+        "name": "ВАО"
+      },
+      {
+        "regions": [],
+        "id": 5,
+        "name": "ЮВАО"
+      },
+      {
+        "regions": [],
+        "id": 6,
+        "name": "САО"
+      }
+    ]
+  }
+}

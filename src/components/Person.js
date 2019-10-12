@@ -27,12 +27,12 @@ export class PersonHorizontal extends Component {
 
 export class PersonVertical extends Component {
     render() {
-        const {image, name, jobTitle, jobDescription} = this.props
+        const {photo, name, jobTitle, jobDescription} = this.props
         return(
 
             <div className='person-container-row'>
                 <div className='person-avatar-container'>
-                    <img src={image} alt='avatar'/>
+                    <img src={`http://localhost:8090/content/${photo}`} alt='avatar'/>
                 </div>
                 <div className='person-column-description-container'>
                     <span className='person-name'>
