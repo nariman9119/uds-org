@@ -1,0 +1,69 @@
+.clubs {
+    max-width: 1440px;
+    margin-top: 104px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.clubs-title {
+    font-size: 50px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(30, 29, 32);
+    margin: 0 0 40px;
+}
+
+.clubs-content {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.clubs-list {
+    min-width: 350px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.17;
+    margin: 0;
+    padding: 0;
+}
+
+.clubs-list li {
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    color: rgb(0, 62, 255);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+    cursor: pointer;
+}
+
+.clubs-list li.active {
+    background-color: rgb(0, 62, 255);
+    color: #fff;
+}
+
+.clubs-photos {
+    padding-left: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.club-current-photo {
+    max-width: 1440px;
+    opacity: 1;
+    transition: opacity 0.05s cubic-bezier(0.6, 0.18, 0.86, 0.69) 0s;
+}
+
+.club-current-photo img {
+    max-width: calc(384px + (282 * ((100vw - 768px) / 672)));
+    max-height: calc(355px + (261 * ((100vw - 768px) / 672)));
+}
+

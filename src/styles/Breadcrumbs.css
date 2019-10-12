@@ -1,0 +1,27 @@
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.breadcrumb-el {
+    text-transform: uppercase;
+    color: rgb(0, 62, 255);
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.breadcrumb-arrow {
+    display: inline-block;
+    color: rgb(142, 142, 143);
+    margin: 0 8px;
+    transform: rotate(180deg)
+}
+
+.breadcrumb-current {
+    text-transform: uppercase;
+    color: rgb(194, 194, 194);
+    font-size: 10px;
+    font-weight: bold;
+}
