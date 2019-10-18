@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: [
         '@babel/polyfill',
-        'webpack-hot-middleware/client',
         "./src/index.js"
     ], // set polyfill first to avoid errors related to async/await
 
