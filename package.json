@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
-    "stub": "nodemon ./stub/index.js",
+    "stub": "nodemon ./stub/index.js --watch src",
     "build": "webpack --mode production --config=webpack.config.prod.js",
     "dev": "webpack --mode development --config=webpack.config.js",
     "database": "docker run -p 3306:3306 --name udsdb -e MYSQL_ROOT_PASSWORD=udsdeveloper -d mysql:8 mysqld --default-authentication-plugin=mysql_native_password",
