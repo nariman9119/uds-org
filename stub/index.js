@@ -4,13 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const config = require('../webpack.config');
-const webpack = require('webpack');
-
-const compiler = webpack(config);
-app.use(require("webpack-dev-middleware")(compiler, {
-    noInfo: true, publicPath: config.output.publicPath
-}));
 
 app.use(bodyParser.json());
 app.use(cors()); // to avoid cors problem (google it if you dont know)
