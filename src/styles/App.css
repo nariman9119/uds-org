@@ -3,8 +3,9 @@
 /*    text-align: center;*/
 /*}*/
 
-.org-root * {
+.app_global_wrapper {
     box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
 }
 
 .container {
@@ -21,12 +22,8 @@
 }
 
 .col-3 {
-    width: 24%;
+    width: 25%;
     padding: 0 15px;
-}
-
-.list-page {
-    font-family: Montserrat, sans-serif;
 }
 
 h1.list-page-header {
@@ -101,4 +98,24 @@ h1.list-page-header {
     color: #003dff;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media(max-width: 767px) {
+    .col-3 {
+        width: 50%;
+    }
+
+    h1.list-page-header {
+        font-size: 42px;
+    }
+}
+
+@media(max-width: 575px) {
+    .col-3 {
+        width: 100%;
+    }
+
+    h1.list-page-header {
+        font-size: 36px;
+    }
 }

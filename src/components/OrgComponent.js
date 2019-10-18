@@ -29,14 +29,16 @@ class OrgComponent extends Component {
         }
 
         return (
-            <div>
-                <DescriptionBlock/>
-                <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups} />
-                <AdministrationBlock persons={data.administration} />
-                <AboutOrganization about={data.about} />
-                <ClubsBlock />
-                <RewardsBlock />
-                <StaffBlock />
+            <div className="container">
+                <div className="col-12">
+                    <DescriptionBlock/>
+                    <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups} />
+                    <AdministrationBlock persons={data.administration} />
+                    <AboutOrganization about={data.about} />
+                    <ClubsBlock />
+                    <RewardsBlock />
+                    <StaffBlock />
+                </div>
             </div>
         );
     }
