@@ -1,10 +1,12 @@
+.org-body {
+    padding: 0 20px;
+}
 
 .section {
     display: block;
 }
 
 .description-block {
-
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -30,6 +32,9 @@ h1.description-block-title {
     margin-top: 40px;
     margin-bottom: 0;
     font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: rgb(30, 29, 32);
 }
 
 .description-block-abstract-description {
@@ -252,7 +257,6 @@ button.staff-block-footer {
     border-color: initial;
     border-image: initial;
 }
-
 @media (max-width: 767px) {
     h1.description-block-title, h2.block-title {
         font-size: 42px;
