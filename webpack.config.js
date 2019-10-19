@@ -2,7 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: ['@babel/polyfill', "./src/index.js"], // set polyfill first to avoid errors related to async/await
+    entry: [
+        '@babel/polyfill',
+        "./src/index.js"
+    ], // set polyfill first to avoid errors related to async/await
 
     output: {
         path: path.join(__dirname, "/dist"),
@@ -33,7 +36,7 @@ module.exports = {
         ]
     },
     devServer: {
-        historyApiFallback: true,
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({

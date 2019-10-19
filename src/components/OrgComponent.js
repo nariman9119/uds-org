@@ -30,15 +30,16 @@ class OrgComponent extends Component {
         }
 
         return (
-            <div className="org-body">
-                <Breadcrumbs orgName={data.name} />
-                <DescriptionBlock/>
-                <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups} />
-                <AdministrationBlock persons={data.administration} />
-                <AboutOrganization about={data.about} />
-                <ClubsBlock clubs={data.clubs} />
-                <RewardsBlock />
-                <StaffBlock />
+            <div className="container org-body">
+                <div className="col-12">
+                    <DescriptionBlock/>
+                    <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups} />
+                    <AdministrationBlock persons={data.administration} />
+                    <AboutOrganization about={data.about} />
+                    <ClubsBlock />
+                    <RewardsBlock />
+                    <StaffBlock />
+                </div>
             </div>
         );
     }

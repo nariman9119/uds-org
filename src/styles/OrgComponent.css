@@ -28,11 +28,10 @@ img.description-block-logo {
 }
 
 h1.description-block-title {
-    font-size: 50px;
-    margin: 0;
+    font-size: 48px;
+    margin-top: 40px;
+    margin-bottom: 0;
     font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
     line-height: 1.2;
     letter-spacing: normal;
     color: rgb(30, 29, 32);
@@ -107,7 +106,7 @@ h2.block-title {
     text-align: center;
     width: 100%;
     font-weight: 600;
-
+    margin-bottom: 0;
 }
 
 .sections-block-schedule {
@@ -139,7 +138,7 @@ span.sections-block-schedule {
     align-items: center;
     height: 58px;
     padding-left: 16px;
-    border-bottom: 1px solid
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .sections-svg {
@@ -237,12 +236,12 @@ span.sections-block-schedule {
     border-radius: 16px;
 }
 
-.staff-block-footer-title{
+.staff-block-footer-title {
     font-size: 50px;
     font-weight: bold;
 }
 
-button.staff-block-footer{
+button.staff-block-footer {
     margin-top: 25px;
     background-color: rgb(255, 255, 255);
     font-size: 18px;
@@ -257,4 +256,15 @@ button.staff-block-footer{
     border-style: none;
     border-color: initial;
     border-image: initial;
+}
+@media (max-width: 767px) {
+    h1.description-block-title, h2.block-title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 575px) {
+    h1.description-block-title, h2.block-title {
+        font-size: 36px;
+    }
 }

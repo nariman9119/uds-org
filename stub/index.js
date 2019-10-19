@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require('fs');
 const path = require('path');
-const  cors = require('cors');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
