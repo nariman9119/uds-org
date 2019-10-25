@@ -9,15 +9,15 @@ export class PersonHorizontal extends Component {
 
         return (
             <div className='person-container-column'>
-                <div className='person-avatar-container'>
+                <div className='person-avatar-container-2'>
                     <img src={`http://localhost:8090/content/${photo}`} alt='avatar'/>
                 </div>
                 <span className='person-job-title center-text'>
-                {name}
-            </span>
+                    {name}
+                </span>
                 <span className='person-job-description center-text'>
-                {jobTitle}
-            </span>
+                    {jobTitle}
+                </span>
             </div>
 
         )
@@ -27,7 +27,7 @@ export class PersonHorizontal extends Component {
 
 export class PersonVertical extends Component {
     render() {
-        const {photo, name, jobTitle, jobDescription} = this.props
+        const {photo, name, jobTitle, jobDescription} = this.props;
         return(
 
             <div className='person-container-row'>

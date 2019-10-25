@@ -277,7 +277,6 @@ button.staff-block-footer {
 
 .reward-block-section {
     position: relative;
-    font-family: Montserrat;
     font-size: 12px;
     font-weight: 600;
     font-style: normal;
@@ -327,7 +326,6 @@ button.staff-block-footer {
 
 
 .reward-block-section-place{
-    background-image: url((unknown));
     background-size: contain;
     width: 100%;
     height: 100%;
