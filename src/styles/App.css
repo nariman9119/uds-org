@@ -21,6 +21,11 @@
     padding: 0 15px;
 }
 
+.col-6 {
+    width: calc(50% - 30px);
+    padding: 0 15px;
+}
+
 .col-3 {
     width: 25%;
     padding: 0 15px;
@@ -105,6 +110,10 @@ h1.list-page-header {
         width: 50%;
     }
 
+    .col-6 {
+        width: 100%;
+    }
+
     h1.list-page-header {
         font-size: 42px;
     }
@@ -112,6 +121,10 @@ h1.list-page-header {
 
 @media(max-width: 575px) {
     .col-3 {
+        width: 100%;
+    }
+
+    .col-6 {
         width: 100%;
     }
 

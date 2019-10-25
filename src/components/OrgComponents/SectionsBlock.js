@@ -1,5 +1,6 @@
 import '../../styles/OrgComponent.css';
 import React, {Component} from 'react';
+import SingleSectionBlock from "./SingleSectionBlock";
 
 class SectionsBlock extends Component {
 
@@ -10,14 +11,21 @@ class SectionsBlock extends Component {
             colour: 0
         };
 
-
-        this.handleToggle = this.handleToggle.bind(this)
-    }
-
-    handleToggle() {
-        this.setState(state => ({
-            isOpened: !state.isOpened
-        }));
+        this.types = [{
+            'name': '2-6 лет',
+            'sections': [
+                {'name': 'ОФП для дошкольного возраста'},
+                {'name': 'Самбо'},
+                {'name': 'Студия раннего развития "Кузя"'},
+            ]
+        }, {
+            'name': '7-11 лет',
+            'sections': [
+                {'name': 'ОФП для дошкольного возраста'},
+                {'name': 'Самбо'},
+                {'name': 'Студия раннего развития "Кузя"'},
+            ]
+        }];
     }
 
     render() {
@@ -38,52 +46,9 @@ class SectionsBlock extends Component {
                     </a>
                 </div>
 
-                <div className='sections-age section-color' onClick={this.handleToggle}>
-                    <div className='sections-age-1'>
-                        <svg viewBox="0 0 20 12" className="sections-svg">
-                            <path fill="#1E1D20" fill-rule="nonzero"
-                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
-                                  opacity=".5"></path>
-                        </svg>
-                        <h3 className='sections-age-title'>2-6 лет</h3>
-                    </div>
-                </div>
-                <div className='sections-age section-color' onClick={this.handleToggle}>
-
-                    <div className='sections-age-1'>
-                        <svg viewBox="0 0 20 12" className="sections-svg" open="">
-                            <path fill="#1E1D20" fill-rule="nonzero"
-                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
-                                  opacity=".5"></path>
-                        </svg>
-                        <h3 className='sections-age-title'>7-11 лет</h3>
-                    </div>
-                </div>
-                <div className='sections-age section-color' onClick={this.handleToggle}>
-                    <div className='sections-age-1'>
-                        <svg viewBox="0 0 20 12" className="sections-svg">
-                            <path fill="#1E1D20" fill-rule="nonzero"
-                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
-                                  opacity=".5"></path>
-                        </svg>
-                        <h3 className='sections-age-title'>12-17 лет</h3>
-                    </div>
-                </div>
-
-                <div className='sections-age section-color' onClick={this.handleToggle}>
-
-                    <div className='sections-age-1'>
-                        <svg viewBox="0 0 20 12" className="sections-svg">
-                            <path fill="#1E1D20" fill-rule="nonzero"
-                                  d="M18.257.331a1 1 0 1 1 1.486 1.338l-9 10a1 1 0 0 1-1.486 0l-9-10A1 1 0 0 1 1.743.331L10 9.505 18.257.331z"
-                                  opacity=".5"></path>
-                        </svg>
-                        <h3 className='sections-age-title'>18 лет и старше</h3>
-                    </div>
-
-                </div>
-
-
+                {this.types.map((type, i) => {
+                    return (<SingleSectionBlock key={i} name={type.name} sections={type.sections}/>)
+                })}
             </section>
         );
     }

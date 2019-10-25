@@ -160,7 +160,7 @@ span.sections-block-schedule {
 
 }
 
-.section-color:hover {
+.section-color .sections-age-1:hover {
     cursor: pointer;
     background-color: #E6E6FE;
 }
@@ -256,6 +256,63 @@ button.staff-block-footer {
     border-style: none;
     border-color: initial;
     border-image: initial;
+}
+
+
+.single-opened-section {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgb(0, 62, 255);
+    display: block;
+    padding: 16px;
+    text-align: right;
+    overflow: auto;
+}
+
+.single-opened-section span {
+    float: left;
+}
+
+.single-opened-section button {
+    float: right;
+    display: none;
+    background-color: rgb(0, 62, 255);
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-left: auto;
+    border-radius: 28px;
+    padding: 10px 22px;
+    outline: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+
+.single-opened-section:hover {
+    background-color: rgb(230, 236, 255);
+    cursor: pointer;
+}
+
+.single-opened-section:hover button {
+    display: block;
+}
+
+.section-opened .sections-svg {
+    transform: rotate(360deg);
 }
 
 @media (max-width: 767px) {
