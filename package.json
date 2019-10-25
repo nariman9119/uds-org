@@ -1,6 +1,6 @@
 {
   "name": "uds-orgs",
-  "version": "1.0.20",
+  "version": "1.0.22",
   "private": false,
   "description": "UDS-ORG",
   "main": "dist/orgsApp.js",

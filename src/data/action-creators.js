@@ -14,7 +14,7 @@ export const changeTitle = (title) => ({
 export const loadOrganizations = () => async (dispatch) => {
     dispatch({ type: actions.LOAD_ORGANIZATIONS_PENDING });
     try {
-        const response = await fetch('/api/organizations');
+        const response = await fetch('orgs/api/organizations');
         const data = await response.json();
         //console.log('haha')
         //console.log(data.orgsData.areas)
@@ -27,7 +27,7 @@ export const loadOrganizations = () => async (dispatch) => {
 export const loadCurrentOrganization = (url) => async (dispatch) => {
     dispatch({ type: actions.LOAD_CURRENT_ORGANIZATION_PENDING });
     try {
-        const response = await fetch(`/api/organization/${url}`);
+        const response = await fetch(`orgs/api/organization/${url}`);
         console.log(response)
         const data = await response.json();
 
