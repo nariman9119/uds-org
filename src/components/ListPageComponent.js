@@ -30,10 +30,7 @@ class ListPageComponent extends Component {
     render() {
 
 
-        console.log("hello")
-        console.log(this.props.organizations)
 
-        console.log("bye")
         return (
             <div className="container list-page">
                 <div className="col-12">

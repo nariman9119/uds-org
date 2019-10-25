@@ -8,8 +8,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(cors()); // to avoid cors problem (google it if you dont know)
 
-//app.use('/orgs',require('./api'));
-app.use('/orgs',require('./orgs/orgs.controller'));
+app.use('/orgs',require('./api'));
+//app.use('/orgs',require('./orgs/orgs.controller'));
 
 app.use(express.static("dist"));
 app.use(express.static("stub/shared")); // open content dir to web

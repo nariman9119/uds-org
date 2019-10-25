@@ -27,7 +27,10 @@ class OrgComponent extends Component {
                 </div>
             )
         }
+        console.log("hello")
+        console.log(data)
 
+        console.log("bye")
         return (
             <div className="container org-body">
                 <div className="col-12">
