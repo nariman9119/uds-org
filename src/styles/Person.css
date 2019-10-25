@@ -29,13 +29,27 @@
 }
 
 .person-avatar-container {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     margin-bottom: 20px;
     flex-shrink: 0;
 }
 
 .person-avatar-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+.person-avatar-container-2 {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.person-avatar-container-2 img {
     height: 100%;
     width: 100%;
     border-radius: 50%;

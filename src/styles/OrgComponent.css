@@ -258,6 +258,7 @@ button.staff-block-footer {
     border-image: initial;
 }
 
+
 .single-opened-section {
     font-size: 16px;
     font-weight: bold;
@@ -313,6 +314,7 @@ button.staff-block-footer {
 .section-opened .sections-svg {
     transform: rotate(360deg);
 }
+
 @media (max-width: 767px) {
     h1.description-block-title, h2.block-title {
         font-size: 42px;
@@ -322,5 +324,162 @@ button.staff-block-footer {
 @media (max-width: 575px) {
     h1.description-block-title, h2.block-title {
         font-size: 36px;
+    }
+}
+
+.reward-block {
+    margin-top: 104px;
+}
+
+
+.reward-block-section {
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    color: rgb(255, 255, 255);
+    align-self: center;
+    justify-self: center;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.reward-block-section-div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.reward-block-section-svg {
+    width: 5%;
+    opacity: 0.2;
+}
+
+.reward-block-section-svg-transform {
+    transform: rotate(180deg);
+}
+
+.reward-block-section-places {
+    height: calc(380px + (0 * ((100vw - 768px) / 672)));
+    width: 100%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+
+.reward-block-section-place-number {
+    margin-top: 20px;
+    font-size: 68px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(30, 29, 32);
+}
+
+.reward-block-section-place-place {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(30, 29, 32);
+}
+
+.reward-block-section-place-date {
+    margin-top: 44px;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(30, 29, 32);
+}
+
+.reward-block-section-place-text {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(30, 29, 32);
+}
+
+.reward-block-section-place-svg {
+    position: absolute;
+}
+
+
+.reward-block-section-place-1 {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    color: rgb(0, 0, 0);
+    order: 2;
+    left: 75%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: left 1s ease-in-out 0s;
+}
+
+.reward-block-section-place-2 {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    color: rgb(0, 0, 0);
+    order: 2;
+    left: 75%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: left 1s ease-in-out 0s;
+}
+
+
+@media (min-width: 810px) {
+
+    .reward-block-section-place-1 {
+        width: 30%;
+        left: 0%;
+    }
+
+    .reward-block-section-place-2 {
+        width: 30%;
+        left: 35%;
     }
 }
