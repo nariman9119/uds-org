@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 
 export class PersonHorizontal extends Component {
     render() {
-        const {photo, name, position} = this.props;
+        const {photo, name, jobTitle} = this.props;
 
         return (
             <div className='person-container-column'>
@@ -16,7 +16,7 @@ export class PersonHorizontal extends Component {
                 {name}
             </span>
                 <span className='person-job-description center-text'>
-                {position}
+                {jobTitle}
             </span>
             </div>
 

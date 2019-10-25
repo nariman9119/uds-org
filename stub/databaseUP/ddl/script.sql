@@ -26,7 +26,7 @@
 CREATE TABLE `administration` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `jobTitle` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `organization_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -41,6 +41,25 @@ LOCK TABLES `administration` WRITE;
 /*!40000 ALTER TABLE `administration` ENABLE KEYS */;
 UNLOCK TABLES;
 
+
+CREATE TABLE `stuff` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `jobTitle` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `jobDescription` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `organization_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_stuff_organization` (`organization_id`),
+  CONSTRAINT `fk_stuff_organization` FOREIGN KEY (`organization_id`) REFERENCES `organizations` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `stuff` WRITE;
+/*!40000 ALTER TABLE `stuff` DISABLE KEYS */;
+
+
+/*!40000 ALTER TABLE `stuff` ENABLE KEYS */;
+UNLOCK TABLES;
 
 # Дамп таблицы areas
 # ------------------------------------------------------------
@@ -202,21 +221,6 @@ LOCK TABLES `sections` WRITE;
 /*!40000 ALTER TABLE `sections` ENABLE KEYS */;
 UNLOCK TABLES;
 
-
-# Дамп таблицы stuff
-# ------------------------------------------------------------
-
-CREATE TABLE `stuff` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `trainings` text COLLATE utf8mb4_unicode_ci,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `organization_id` int(11) DEFAULT NULL,
-  `competense` enum('sport','creative') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_stuff_organization` (`organization_id`),
-  CONSTRAINT `fk_stuff_organization` FOREIGN KEY (`organization_id`) REFERENCES `organizations` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 

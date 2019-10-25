@@ -27,21 +27,18 @@ class OrgComponent extends Component {
                 </div>
             )
         }
-        console.log("hello")
-        console.log(data)
 
-        console.log("bye")
         return (
             <div className="container org-body">
                 <div className="col-12">
-                    <Breadcrumbs orgName={data.name} />
+                    <Breadcrumbs orgName={data.name}/>
                     <DescriptionBlock/>
-                    <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups} />
-                    <AdministrationBlock persons={data.administration} />
-                    <AboutOrganization about={data.about} />
-                    <ClubsBlock clubs={data.clubs} />
-                    <RewardsBlock />
-
+                    <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups}/>
+                    <AdministrationBlock persons={data.administration}/>
+                    <AboutOrganization about={data.about}/>
+                    <ClubsBlock clubs={data.clubs}/>
+                    <RewardsBlock/>
+                    <StaffBlock/>
                 </div>
             </div>
         );
