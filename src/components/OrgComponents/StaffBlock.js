@@ -20,7 +20,7 @@ class StaffBlock extends Component {
                         this.props.data.stuff.map(person =>
                             <PersonVertical key={person.id} {...person}/>
                         )}
-                    {console.log(this.props.data.stuff)}
+
                 </div>
                 <div className='staff-block-footer'>
                     <div className='staff-block-footer-title'>Достигайте своих целей</div>
