@@ -28,8 +28,10 @@ async function getOrg(url){
     const connection = new DataBase();
     await connection.init();
 
+
     const data = (await connection.execute(`SELECT * FROM uds.organizations WHERE url = "${url}"`))[0][0];
 
+    console.log(data)
     data.section_groups = (await connection.execute('SELECT * from uds.section_groups'))[0];
 
     for (const group of data.section_groups) {

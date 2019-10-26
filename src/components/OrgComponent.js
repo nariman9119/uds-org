@@ -15,12 +15,11 @@ import Breadcrumbs from "./OrgComponents/Breadcrumbs";
 
 class OrgComponent extends Component {
     componentDidMount() {
-        this.props.loadCurrentOrganization(this.props.page[1]);
+        this.props.loadCurrentOrganization(this.props.page[2]);
     }
 
     render() {
         const {data} = this.props;
-
         if (!data) {
             return (
                 <div>
@@ -32,14 +31,14 @@ class OrgComponent extends Component {
         return (
             <div className="container org-body">
                 <div className="col-12">
-                    <Breadcrumbs orgName={data.name} />
+                    <Breadcrumbs orgName={data.name}/>
                     <DescriptionBlock/>
-                    <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups} />
-                    <AdministrationBlock persons={data.administration} />
-                    <AboutOrganization about={data.about} />
-                    <ClubsBlock clubs={data.clubs} />
-                    <RewardsBlock />
-                    <StaffBlock />
+                    <SectionsBlock schedule_url={data.schedule_url} section_groups={data.section_groups}/>
+                    <AdministrationBlock persons={data.administration}/>
+                    <AboutOrganization about={data.about}/>
+                    <ClubsBlock clubs={data.clubs}/>
+                    <RewardsBlock/>
+                    <StaffBlock/>
                 </div>
             </div>
         );

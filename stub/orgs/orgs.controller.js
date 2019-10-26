@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const orgsService = require('./orgs.service');
 //const moment = require('moment')
-const authorize = require("../_helpers/authorize");
-const Role = require("../_helpers/role");
+//const authorize = require("../_helpers/authorize");
+//const Role = require("../_helpers/role");
 
 router.post('/api/organization/updateMainInfo', updateMainInfo);
 

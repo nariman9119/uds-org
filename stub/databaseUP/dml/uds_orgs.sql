@@ -27,12 +27,26 @@
 LOCK TABLES `administration` WRITE;
 /*!40000 ALTER TABLE `administration` DISABLE KEYS */;
 
-INSERT INTO `administration` (`id`, `name`, `position`, `photo`, `organization_id`)
+INSERT INTO `administration` (`id`, `name`, `jobTitle`, `photo`, `organization_id`)
 VALUES
 	(1,'Саидова Наталья Павловна','Заместитель директора','orion/zam1.png',1),
 	(2,'Данилова Татьяна Васильевна','Методист','orion/zam2.png',1);
 
 /*!40000 ALTER TABLE `administration` ENABLE KEYS */;
+UNLOCK TABLES;
+
+#----------------------------------------
+LOCK TABLES `stuff` WRITE;
+/*!40000 ALTER TABLE `stuff` DISABLE KEYS */;
+
+INSERT INTO `stuff` (`id`, `name`, `jobTitle`, `photo`, `jobDescription`, `organization_id`)
+VALUES
+	(1,'Харлан Наталья Владимировна','Заместитель директора','orion/1.png','Занимается программированием программ',1),
+	(2,'Родионова Александра Сергеевна','Методист','orion/2.png','Занимается менеджингом программ, программируемых программирующими программистами',1),
+	(3,'Арбузкин Денис Александрович','Занятия: Айкидо для детей 9 – 17 лет, Самозащита 18+','orion/3.jpg','Инструктор Федерации Айкидо России . 1-й дан по Айкидо Акикай. 1-й дан по Шотокан Каратэ до. Мастер спорта по Самбо.',1);
+
+
+/*!40000 ALTER TABLE `stuff` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
