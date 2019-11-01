@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {PersonVertical} from '../Person'
+
+import {PersonHorizontal, PersonVertical} from "uds-ui";
 
 import '../../styles/Person.css'
 import '../../styles/OrgComponent.css'
@@ -18,7 +19,7 @@ class StaffBlock extends Component {
                 <div className='persons-wrapper-row staff-block-staff'>
                     {
                         this.props.data.stuff.map(person =>
-                            <PersonVertical key={person.id} {...person}/>
+                            <PersonHorizontal key={person.id} name={person.name} image={"http://" + window.location.host+"/content/"+person.photo} jobTitle={person.jobTitle} jobDescription={person.jobDescription}/>
                         )}
 
                 </div>

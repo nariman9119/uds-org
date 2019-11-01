@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {PersonHorizontal, PersonVertical} from '../Person';
+import {PersonHorizontal, PersonVertical} from "uds-ui";
 
 import '../../styles/Person.css'
 
@@ -11,8 +11,9 @@ export class AdministrationBlock extends Component {
                     <h2 className='block-title'>Администрация</h2>
                 </div>
                 <div className='persons-wrapper-row'>
+                    {console.log(window.location.host)}
                     {this.props.persons.map(person =>
-                        <PersonHorizontal key={person.id} {...person}/>
+                        <PersonVertical key={person.id} name={person.name} image={"http://" + window.location.host+"/content/"+person.photo}/>
                     )}
                 </div>
             </div>
