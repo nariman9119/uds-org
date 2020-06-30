@@ -50,7 +50,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "express": "^4.16.4",
-    "express-jwt": "5.3.1"
+    "express-jwt": "6.0.0"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
